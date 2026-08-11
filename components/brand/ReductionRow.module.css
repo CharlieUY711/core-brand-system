@@ -1,0 +1,43 @@
+.row {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.px {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--core-muted);
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.chip.light {
+  background: var(--core-surface);
+  border: 1px solid var(--core-line);
+}
+
+.chip.dark {
+  background: var(--core-ink);
+}
+
+.iconDark {
+  color: var(--core-ink);
+}
+
+.iconLight {
+  color: #fff;
+}
