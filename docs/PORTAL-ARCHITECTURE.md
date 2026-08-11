@@ -23,6 +23,7 @@ The portal uses one canonical domain with path-based sections rather than multip
 /system/intelligence
 /system/finance
 /architecture
+/architecture/charlie
 /architecture/oddy
 /architecture/ondemand
 /architecture/comita
@@ -47,26 +48,35 @@ The approved CORE Brand & System artifact is the visual and conceptual baseline 
 
 ## Corporate model
 
+CHARLIE sits above CORE conceptually (vision, governance). CORE is the
+vertex — the Business Operating System that orchestrates and executes.
+ODDY, OnDemand and COMITA are peer entities under CORE. **ODDY must never
+be rendered as CORE's parent.**
+
 ```text
-ODDY
-Corporate Ecosystem
-        |
-       CORE
-Technology Platform / System
-     /          \
-OnDemand      COMITA
-Logistics     Commerce
+                CHARLIE
+           Vision · Governance
+                   |
+                  CORE
+      Business Operating System
+      Platform · Intelligence · Orchestration
+        __________|__________
+       |          |          |
+     ODDY      OnDemand    COMITA
+   Ecosystem   Logistics   Commerce
 ```
 
 ## Technology layers
 
 - CORE Logistics = technology layer for OnDemand logistics operations
 - CORE Market = technology layer for COMITA commerce
+- CORE Rep, CORE Intelligence, CORE Finance = transversal capabilities, not tied to a single operator
 
 ## Terminology constraints
 
+- `Charlie` is vision and governance — the top conceptual level. It is not a product, not an application, not an operating vertical.
+- `CORE` is the Business Operating System: platform, intelligence, orchestration. It executes the vision Charlie defines. It is the vertex of the operational model, never a child of ODDY.
+- `ODDY` is an ecosystem/brand entity that CORE connects, alongside OnDemand and COMITA. It must never be rendered or described as CORE's parent, and never as the logistics operator.
 - `OnDemand` is logistics operations, including free-zone and regional operations. It is **not commerce**.
 - `COMITA` is commerce.
-- `CORE` is the technology platform/system.
-- `ODDY` is the corporate ecosystem.
 - `COMITIA` is not a valid name and must never appear in the production portal.

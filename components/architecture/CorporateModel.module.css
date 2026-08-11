@@ -1,5 +1,5 @@
 .model {
-  max-width: 480px;
+  max-width: 620px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -10,9 +10,9 @@
   border: 1px solid var(--core-line);
   background: var(--core-surface);
   border-radius: 8px;
-  padding: 12px 18px;
+  padding: 12px 14px;
   text-align: center;
-  min-width: 150px;
+  min-width: 120px;
   text-decoration: none;
   color: inherit;
 }
@@ -77,8 +77,8 @@
   content: "";
   position: absolute;
   top: 18px;
-  left: 22%;
-  right: 22%;
+  left: 10%;
+  right: 10%;
   height: 1px;
   background: var(--core-line);
 }
@@ -87,12 +87,26 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: 16px;
+  gap: 12px;
 }
 
 .leaves .col {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  flex: 1 1 0;
+}
+
+@media (max-width: 520px) {
+  .leaves {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .branch::after {
+    display: none;
+  }
+  .leaves .col {
+    width: 100%;
+  }
 }

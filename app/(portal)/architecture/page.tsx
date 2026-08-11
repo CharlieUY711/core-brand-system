@@ -12,7 +12,7 @@ export default function ArchitectureOverview() {
       <Section
         eyebrow="Corporate Architecture"
         title="Corporate Architecture"
-        lede="Brand defines how CORE looks. Corporate Architecture defines how the ecosystem is organized and who does what — the two are never mixed."
+        lede="Brand defines how CORE looks. Corporate Architecture defines how the ecosystem is organized and who does what — the two are never mixed. Charlie defines the vision; CORE is the Business Operating System that orchestrates and executes it; ODDY, OnDemand and COMITA are the entities and operations that run the business."
       />
 
       <div className={styles.diagram}>
@@ -21,8 +21,9 @@ export default function ArchitectureOverview() {
 
       <div className={styles.rule}>
         <p>
-          CORE provides the system. OnDemand operates logistics. COMITA develops
-          commerce. ODDY articulates the corporate ecosystem.
+          Charlie defines. CORE orchestrates and executes. OnDemand operates
+          logistics. COMITA develops commerce. ODDY is a brand and ecosystem
+          entity within the system CORE connects — never a parent of CORE.
         </p>
       </div>
 
@@ -36,12 +37,16 @@ export default function ArchitectureOverview() {
         </thead>
         <tbody>
           <tr>
-            <td>ODDY</td>
-            <td>Corporate ecosystem / brand</td>
+            <td>Charlie</td>
+            <td>Vision · governance — top conceptual level, not a product or vertical</td>
           </tr>
           <tr>
             <td>CORE</td>
-            <td>Technology platform / system</td>
+            <td>Business Operating System — platform · intelligence · orchestration</td>
+          </tr>
+          <tr>
+            <td>ODDY</td>
+            <td>Ecosystem / brand entity connected by CORE — not CORE&apos;s parent</td>
           </tr>
           <tr>
             <td>OnDemand</td>

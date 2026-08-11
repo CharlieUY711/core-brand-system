@@ -29,6 +29,7 @@ const groups: Group[] = [
     title: "Corporate Architecture",
     items: [
       { label: "Overview", href: "/architecture", live: true },
+      { label: "Charlie", href: "/architecture/charlie", live: true },
       { label: "ODDY", href: "/architecture/oddy", live: true },
       { label: "OnDemand", href: "/architecture/ondemand", live: true },
       { label: "COMITA", href: "/architecture/comita", live: true },

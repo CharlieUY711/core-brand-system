@@ -240,7 +240,7 @@ export default function BrandGuidelinesPage() {
             ["1", "ODDY", "Corporate brand / origin. External identity, immutable — CORE does not replace or reinterpret it."],
             ["2", "CORE", "Platform / system. The technology layer that orchestrates the ecosystem — the D3-C symbol lives at this level."],
             ["3", "CORE Group", "Corporate structure of the ecosystem, when context requires it (manuals, institutional communication)."],
-            ["4", "Verticals / products", "CORE Logistics, CORE Rep, CORE Market, CORE Intelligence, CORE Finance — subordinate extensions, never independent brands. CORE Logistics is the technology layer for OnDemand; CORE Market is the technology layer for COMITA. CORE provides the system — it does not operate logistics or commerce. See § 19."],
+            ["4", "Verticals / products", "CORE Logistics, CORE Rep, CORE Market, CORE Intelligence, CORE Finance — subordinate extensions, never independent brands. CORE Logistics is the technology layer for OnDemand; CORE Market is the technology layer for COMITA; CORE Rep, CORE Intelligence and CORE Finance are transversal capabilities of the platform, not tied to a single operator. CORE provides the system — it does not operate logistics or commerce. See § 19."],
           ].map(([n, t, d]) => (
             <div key={n} style={{ display: "flex", gap: 20, padding: "18px 0", borderBottom: n !== "4" ? "1px solid var(--core-line)" : "none" }}>
               <div style={{ fontFamily: "var(--font-mono)", fontWeight: 700, fontSize: 11, color: "#fff", background: "var(--core-ink)", width: 26, height: 26, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", flex: "none" }}>{n}</div>
@@ -257,8 +257,9 @@ export default function BrandGuidelinesPage() {
         <CorporateModel />
         <div className={s.card} style={{ border: "1.5px solid var(--core-signal)", background: "rgba(14,138,130,.06)", textAlign: "center", marginTop: 26, maxWidth: 640 }}>
           <p style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 13.5, margin: 0 }}>
-            CORE provides the system. OnDemand operates logistics. COMITA develops
-            commerce. ODDY articulates the corporate ecosystem.
+            Charlie defines. CORE orchestrates and executes. OnDemand operates
+            logistics. COMITA develops commerce. ODDY is a brand and ecosystem
+            entity within the system — never a parent of CORE.
           </p>
         </div>
       </BrandSection>

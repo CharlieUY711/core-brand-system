@@ -21,10 +21,11 @@ This repository contains the public-facing CORE Brand & System portal and its su
 - CORE Finance
 
 ### Corporate Architecture
-- ODDY — corporate ecosystem
+- Charlie — vision / governance, the top conceptual level
+- CORE — Business Operating System: platform, intelligence, orchestration; executes Charlie's vision
+- ODDY — ecosystem / brand entity connected by CORE (not CORE's parent)
 - OnDemand — logistics operations, including free-zone and regional operations
 - COMITA — commerce
-- CORE — technology platform / system
 
 ### Resources
 - SVG / PNG assets
@@ -41,7 +42,20 @@ This repository contains the public-facing CORE Brand & System portal and its su
 
 ## Architecture principle
 
-> CORE provides the system. OnDemand operates logistics. COMITA develops commerce. ODDY articulates the corporate ecosystem.
+> Charlie defines. CORE orchestrates and executes. OnDemand operates logistics. COMITA develops commerce. ODDY is a brand and ecosystem entity within the system — never a parent of CORE.
+
+```text
+                CHARLIE
+           Vision · Governance
+                   |
+                  CORE
+      Business Operating System
+      Platform · Intelligence · Orchestration
+        __________|__________
+       |          |          |
+     ODDY      OnDemand    COMITA
+   Ecosystem   Logistics   Commerce
+```
 
 ## Repository status
 

@@ -34,6 +34,7 @@ const groups: NavGroup[] = [
     label: "Corporate Architecture",
     href: "/architecture",
     items: [
+      { label: "Charlie", href: "/architecture/charlie", live: true },
       { label: "ODDY", href: "/architecture/oddy", live: true },
       { label: "OnDemand", href: "/architecture/ondemand", live: true },
       { label: "COMITA", href: "/architecture/comita", live: true },

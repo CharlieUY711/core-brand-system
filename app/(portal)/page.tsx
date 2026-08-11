@@ -24,8 +24,8 @@ export default function Home() {
           <span className={styles.modelEyebrow}>Corporate model</span>
           <h2 className={styles.modelTitle}>One system. Clear responsibilities.</h2>
           <p className={styles.modelLede}>
-            CORE provides the system. OnDemand operates logistics. COMITA develops
-            commerce. ODDY articulates the corporate ecosystem.
+            Charlie defines. CORE orchestrates and executes. The entities and
+            operations — ODDY, OnDemand, COMITA — run the business.
           </p>
           <CorporateModel />
         </section>

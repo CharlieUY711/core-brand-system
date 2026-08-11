@@ -28,14 +28,21 @@ Reproduce the approved experience first. Refactor second. Redesign never, unless
 
 ## Canonical terminology
 
+Corporate model: Charlie (vision/governance) sits above CORE conceptually.
+CORE is the vertex — the Business Operating System that orchestrates and
+executes. ODDY, OnDemand and COMITA are peer entities under CORE. ODDY is
+never CORE's parent.
+
 | Entity | Responsibility |
 |---|---|
-| ODDY | Corporate ecosystem |
-| CORE | Technology platform / system |
+| Charlie | Vision · governance — top conceptual level, not a product or vertical |
+| CORE | Business Operating System — platform, intelligence, orchestration |
+| ODDY | Ecosystem / brand entity connected by CORE — not CORE's parent |
 | OnDemand | Logistics operations, free-zone and regional |
 | COMITA | Commerce |
 | CORE Logistics | Technology layer for OnDemand |
 | CORE Market | Technology layer for COMITA |
+| CORE Rep, CORE Intelligence, CORE Finance | Transversal capabilities, not tied to a single operator |
 
 ## First production milestone
 
@@ -56,6 +63,7 @@ Incomplete modules must remain explicit placeholders. Do not invent product capa
 - No `COMITIA` occurrence.
 - No claim that OnDemand is commerce.
 - No claim that ODDY is the logistics operator.
+- No representation of ODDY as CORE's parent (ODDY → CORE as a parent/child relationship).
 - No modification of the ODDY logo.
 - No modification of D3-C.
 - No hardcoded deployment hostname in application logic.
