@@ -1,0 +1,24 @@
+.note {
+  background: var(--core-bg-elev);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  max-width: 74ch;
+}
+
+.noteTag {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--core-redline);
+  margin-bottom: 4px;
+}
+
+.note p {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--core-text);
+  margin: 0;
+}

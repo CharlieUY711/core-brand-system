@@ -1,0 +1,31 @@
+.wrap {
+  background: var(--core-surface);
+  border: 1px solid var(--core-line);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.svg {
+  width: 100%;
+  max-width: 460px;
+  display: block;
+  margin: 0 auto;
+}
+
+.hub {
+  color: var(--core-ink);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  fill: var(--core-text);
+}
+
+.category {
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  letter-spacing: 0.08em;
+  fill: var(--core-muted);
+}
