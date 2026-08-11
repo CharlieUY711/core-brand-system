@@ -1,0 +1,91 @@
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--core-signal);
+  border: 1px solid var(--core-signal);
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin-top: -14px;
+}
+
+.role {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--core-muted);
+  max-width: 66ch;
+  margin: 18px 0 0;
+}
+
+.bullets {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 60ch;
+}
+
+.bullets li {
+  font-size: 13.5px;
+  color: var(--core-text);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--core-line);
+}
+
+.bullets li:last-child {
+  border-bottom: none;
+}
+
+.callout {
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-top: 22px;
+  max-width: 74ch;
+}
+
+.calloutTag {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+}
+
+.callout p {
+  font-size: 12.5px;
+  color: var(--core-text);
+  line-height: 1.6;
+  margin: 8px 0 0;
+}
+
+.error {
+  border: 1.5px solid var(--core-error);
+  background: rgba(214, 69, 69, 0.06);
+}
+
+.error .calloutTag {
+  color: var(--core-error);
+}
+
+.rule {
+  border: 1.5px solid var(--core-signal);
+  background: rgba(14, 138, 130, 0.06);
+  text-align: center;
+}
+
+.rule .calloutTag {
+  color: var(--core-signal);
+  font-size: 15px;
+}
+
+.placeholder {
+  display: inline-flex;
+  margin-top: 10px;
+  border: 1px dashed var(--core-muted);
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--core-muted);
+}

@@ -1,0 +1,55 @@
+.flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-top: 24px;
+  max-width: 340px;
+}
+
+.node {
+  border: 1px solid var(--core-line);
+  background: var(--core-surface);
+  border-radius: 8px;
+  padding: 14px 22px;
+  text-align: center;
+  width: 100%;
+}
+
+.node.strong {
+  border-color: var(--core-signal);
+  border-width: 1.5px;
+}
+
+.t {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.d {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--core-muted);
+  margin-top: 4px;
+  letter-spacing: 0.02em;
+}
+
+.stem {
+  width: 1px;
+  height: 24px;
+  background: var(--core-line);
+  position: relative;
+}
+
+.stem::after {
+  content: "\2191";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--core-muted);
+  font-size: 13px;
+  background: var(--core-surface);
+  padding: 0 4px;
+}
