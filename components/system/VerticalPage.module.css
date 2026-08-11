@@ -1,0 +1,34 @@
+.note {
+  font-size: 13px;
+  color: var(--core-muted);
+  margin-top: 14px;
+  max-width: 64ch;
+  line-height: 1.6;
+}
+
+.relation {
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-top: 22px;
+  max-width: 74ch;
+  background: var(--core-bg-elev);
+}
+
+.relationTag {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: var(--core-signal);
+}
+
+.relation p {
+  font-size: 12.5px;
+  color: var(--core-text);
+  line-height: 1.6;
+  margin: 8px 0 0;
+}
+
+.relationLink {
+  color: var(--core-signal);
+}
