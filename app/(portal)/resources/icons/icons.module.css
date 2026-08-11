@@ -1,0 +1,50 @@
+.tabRow {
+  margin-top: 24px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--core-bg-elev);
+  border: 1px solid var(--core-line);
+  border-radius: 7px 7px 0 0;
+  padding: 6px 12px 6px 8px;
+  font-size: 10.5px;
+  color: var(--core-muted);
+}
+
+.tabIcon {
+  color: var(--core-ink);
+}
+
+.tiles {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.tile {
+  border-radius: 8px;
+  background: var(--core-surface);
+  border: 1px solid var(--core-line);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solid {
+  background: var(--core-ink);
+  border-color: var(--core-ink);
+}
+
+.dark {
+  color: var(--core-ink);
+}
+
+.light {
+  color: #fff;
+}

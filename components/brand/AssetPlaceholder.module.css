@@ -1,0 +1,24 @@
+.box {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px dashed var(--core-muted);
+  border-radius: 8px;
+  padding: 14px 18px;
+  max-width: 60ch;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: var(--core-muted);
+}
+
+.note {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--core-muted);
+  margin: 0;
+}
