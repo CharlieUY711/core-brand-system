@@ -1,0 +1,30 @@
+.header {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--core-signal);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(26px, 3.6vw, 38px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 14px 0 0;
+  color: var(--core-ink);
+}
+
+.lede {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--core-muted);
+  max-width: 66ch;
+  margin: 18px 0 0;
+}
