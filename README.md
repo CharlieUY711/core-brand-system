@@ -23,9 +23,10 @@ This repository contains the public-facing CORE Brand & System portal and its su
 ### Corporate Architecture
 - Charlie — vision / governance, the top conceptual level
 - CORE — Business Operating System: platform, intelligence, orchestration; executes Charlie's vision
-- ODDY — ecosystem / brand entity connected by CORE (not CORE's parent)
-- OnDemand — logistics operations, including free-zone and regional operations
-- COMITA — commerce
+- ODDY — logistics brain and territory/last-mile operator (taxed); parent of OnDemand; never a parent of CORE
+- OnDemand — ODDY's subsidiary; free-trade-zone and international logistics (untaxed)
+- COMITA — commerce, goods only ("cuenta y orden")
+- FACILIA — facility services (cleaning, maintenance, operational continuity), services only
 
 ### Resources
 - SVG / PNG assets
@@ -36,25 +37,33 @@ This repository contains the public-facing CORE Brand & System portal and its su
 
 - CORE symbol: D3-C / N0-R0 — frozen
 - ODDY logo: immutable; official asset only
+- FACILIA logo: immutable; official asset only (has its own pre-existing identity)
 - Primary typeface: IBM Plex
 - CORE Ink: `#152238`
 - CORE Signal: `#0E8A82`
 
 ## Architecture principle
 
-> Charlie defines. CORE orchestrates and executes. OnDemand operates logistics. COMITA develops commerce. ODDY is a brand and ecosystem entity within the system — never a parent of CORE.
+> Charlie defines. CORE orchestrates and executes. ODDY operates territory logistics and is the parent of OnDemand, which operates free-trade-zone and international logistics. COMITA trades goods; FACILIA delivers services. ODDY is never a parent of CORE.
 
 ```text
-                CHARLIE
-           Vision · Governance
-                   |
-                  CORE
-      Business Operating System
-      Platform · Intelligence · Orchestration
-        __________|__________
-       |          |          |
-     ODDY      OnDemand    COMITA
-   Ecosystem   Logistics   Commerce
+                         CHARLIE
+                  VISION · GOVERNANCE
+                           |
+                         CORE
+             BUSINESS OPERATING SYSTEM
+          PLATFORM · INTELLIGENCE · ORCHESTRATION
+              ______________|______________
+             |              |              |
+           ODDY           COMITA         FACILIA
+      (logistics brain,   Goods only    Services only
+       territory /
+       last-mile, taxed)
+             |
+         OnDemand
+    (free-trade-zone +
+     international,
+     untaxed)
 ```
 
 ## Repository status

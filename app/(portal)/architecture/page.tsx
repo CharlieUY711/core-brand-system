@@ -12,7 +12,7 @@ export default function ArchitectureOverview() {
       <Section
         eyebrow="Corporate Architecture"
         title="Corporate Architecture"
-        lede="Brand defines how CORE looks. Corporate Architecture defines how the ecosystem is organized and who does what — the two are never mixed. Charlie defines the vision; CORE is the Business Operating System that orchestrates and executes it; ODDY, OnDemand and COMITA are the entities and operations that run the business."
+        lede="Brand defines how CORE looks. Corporate Architecture defines how the ecosystem is organized and who does what — the two are never mixed. Charlie defines the vision; CORE is the Business Operating System that orchestrates and executes it; ODDY (with its subsidiary OnDemand), COMITA and FACILIA are the entities that run the business."
       />
 
       <div className={styles.diagram}>
@@ -21,9 +21,11 @@ export default function ArchitectureOverview() {
 
       <div className={styles.rule}>
         <p>
-          Charlie defines. CORE orchestrates and executes. OnDemand operates
-          logistics. COMITA develops commerce. ODDY is a brand and ecosystem
-          entity within the system CORE connects — never a parent of CORE.
+          Charlie defines. CORE orchestrates and executes. ODDY operates
+          logistics in the domestic territory and is the parent of OnDemand,
+          which operates free-trade-zone and international logistics. COMITA
+          trades goods; FACILIA delivers services — never the other&apos;s
+          function. ODDY is never a parent of CORE.
         </p>
       </div>
 
@@ -46,15 +48,19 @@ export default function ArchitectureOverview() {
           </tr>
           <tr>
             <td>ODDY</td>
-            <td>Ecosystem / brand entity connected by CORE — not CORE&apos;s parent</td>
+            <td>Logistics brain and territory / last-mile operator — parent of OnDemand, not of CORE</td>
           </tr>
           <tr>
             <td>OnDemand</td>
-            <td>Logistics operations</td>
+            <td>ODDY&apos;s subsidiary — free-trade-zone and international logistics</td>
           </tr>
           <tr>
             <td>COMITA</td>
-            <td>Commerce</td>
+            <td>Commerce — goods only ("cuenta y orden")</td>
+          </tr>
+          <tr>
+            <td>FACILIA</td>
+            <td>Facility services — cleaning, maintenance, operational continuity; services only</td>
           </tr>
         </tbody>
       </table>

@@ -1,25 +1,36 @@
 // Corporate Architecture entities.
 //
-// Canonical model (corrected — do not revert to ODDY -> CORE):
+// Canonical model (corrected):
 //
 //                CHARLIE  (vision / governance)
 //                   |
 //                  CORE   (Business Operating System — platform,
 //                          intelligence, orchestration; executes the
 //                          vision Charlie defines)
-//        ___________|___________
-//       |           |           |
-//     ODDY       OnDemand     COMITA
-//   Ecosystem    Logistics   Commerce
+//        ___________|_______________________
+//       |                |                  |
+//     ODDY             COMITA             FACILIA
+//  logistics brain +   Goods (cuenta      Services (cleaning,
+//  territory operator  y orden)           maintenance, operational
+//       |              — no services      continuity) — no goods
+//   OnDemand
+//  free-trade-zone +
+//  international
+//  transport
 //
 // CHARLIE sits above CORE conceptually (vision/governance), never the
-// other way round. ODDY, OnDemand and COMITA are peer entities that CORE
-// orchestrates — ODDY must never be represented as CORE's parent, and
-// must never be described as the logistics operator.
+// other way round. ODDY is the ecosystem's logistics brain AND the
+// operator within the (taxed) domestic territory, including last-mile —
+// it IS a logistics operator, and it is the parent of OnDemand, its
+// subsidiary for free-trade-zone and international transport (untaxed).
+// COMITA and FACILIA are peer entities under CORE, mutually exclusive by
+// design: COMITA only transacts goods (import / "cuenta y orden"),
+// FACILIA only provides services — neither does the other's function.
+// ODDY must never be represented as CORE's parent.
 // COMITA is the only correct spelling. "COMITIA" must never appear.
 
 export type Entity = {
-  slug: "charlie" | "oddy" | "ondemand" | "comita";
+  slug: "charlie" | "oddy" | "ondemand" | "comita" | "facilia";
   name: string;
   tag: string;
   role: string;
@@ -27,6 +38,9 @@ export type Entity = {
   restriction?: string;
   rule?: string;
   immutable?: boolean;
+  /** Slug of the entity this one is a subsidiary of, for rendering as a
+   * nested branch instead of a direct peer under CORE. */
+  parent?: "oddy";
 };
 
 export const entities: Entity[] = [
@@ -45,37 +59,57 @@ export const entities: Entity[] = [
   {
     slug: "oddy",
     name: "ODDY",
-    tag: "Ecosystem / Brand",
-    role: "ODDY is a corporate brand and ecosystem entity that CORE connects and orchestrates, alongside OnDemand and COMITA. ODDY does not sit above CORE, and is not the logistics operator — OnDemand is.",
+    tag: "Logistics — Territory / Last-Mile",
+    role: "ODDY (from \"OnDemand Delivery\") is the ecosystem's logistics brain and the operator within the domestic territory — last-mile and related operations, under the standard tax regime. ODDY is the parent of OnDemand.",
+    bullets: [
+      "Territory and last-mile logistics operation",
+      "Transport, transformation, kitting and assembly of goods within its own territory",
+      "Parent company of OnDemand",
+      "Operates under standard taxation (domestic / \"plaza\")",
+    ],
     immutable: true,
   },
   {
     slug: "ondemand",
     name: "OnDemand",
-    tag: "Logistics Operations",
-    role: "Responsible for the logistics operation of the ecosystem.",
+    tag: "Logistics — Free Zone / International",
+    role: "OnDemand is ODDY's subsidiary, responsible for logistics in free-trade-zone territory and international transport.",
     bullets: [
       "Logistics operation in free-trade-zone territory",
-      "Regional logistics operation",
-      "Operational execution",
-      "Logistics coordination",
-      "Processes and services associated with the logistics operation",
+      "International transport",
+      "Operates tax-exempt, unlike ODDY's domestic operation",
+      "Transport, transformation, kitting and assembly of goods within its own territory",
     ],
     restriction:
       "OnDemand IS NOT COMMERCE. It must not be described as commerce, marketplace, retailer, e-commerce or commercial operation.",
+    parent: "oddy",
   },
   {
     slug: "comita",
     name: "COMITA",
-    tag: "Commerce",
-    role: "Responsible for the commercial activity of the ecosystem.",
+    tag: "Commerce — Goods",
+    role: "COMITA imports and commercializes goods on behalf of clients (\"cuenta y orden\"). It transacts goods only.",
     bullets: [
-      "Commerce and commercial activity",
-      "Products",
-      "E-commerce",
-      "Marketplace when applicable",
+      "Import and commercialization under \"cuenta y orden\"",
+      "Goods only",
       "Sales and commercial operations",
     ],
-    rule: "COMITA = COMMERCE",
+    restriction: "COMITA does not provide services. Service delivery is FACILIA's function, not COMITA's.",
+    rule: "COMITA = GOODS COMMERCE",
+  },
+  {
+    slug: "facilia",
+    name: "FACILIA",
+    tag: "Services — Facility Management",
+    role: "FACILIA delivers on-site services at client facilities — cleaning, maintenance and operational continuity. It provides services only.",
+    bullets: [
+      "Cleaning",
+      "Maintenance",
+      "Operational continuity of client facilities",
+      "Services only",
+    ],
+    restriction: "FACILIA does not transact goods. Goods commerce is COMITA's function, not FACILIA's.",
+    rule: "FACILIA = SERVICES",
+    immutable: true,
   },
 ];

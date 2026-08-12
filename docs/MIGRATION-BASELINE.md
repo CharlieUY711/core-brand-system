@@ -22,6 +22,7 @@ Reproduce the approved experience first. Refactor second. Redesign never, unless
 - IBM Plex typography system
 - CORE Orbit as a distinct system graphic
 - ODDY official logo as immutable external asset
+- FACILIA official logo as immutable external asset (has its own pre-existing identity, same as ODDY)
 - 21 Brand Guidelines sections
 - corrected corporate terminology
 - COMITA spelling in all visible and internal references
@@ -30,16 +31,19 @@ Reproduce the approved experience first. Refactor second. Redesign never, unless
 
 Corporate model: Charlie (vision/governance) sits above CORE conceptually.
 CORE is the vertex — the Business Operating System that orchestrates and
-executes. ODDY, OnDemand and COMITA are peer entities under CORE. ODDY is
-never CORE's parent.
+executes. ODDY, COMITA and FACILIA are peer entities directly under CORE.
+OnDemand is **ODDY's subsidiary** (nested under ODDY, not a direct peer
+under CORE). ODDY is never CORE's parent — but it is a real logistics
+operator, not just a brand/ecosystem label.
 
 | Entity | Responsibility |
 |---|---|
 | Charlie | Vision · governance — top conceptual level, not a product or vertical |
 | CORE | Business Operating System — platform, intelligence, orchestration |
-| ODDY | Ecosystem / brand entity connected by CORE — not CORE's parent |
-| OnDemand | Logistics operations, free-zone and regional |
-| COMITA | Commerce |
+| ODDY | Logistics brain + territory/last-mile operator (taxed). Parent of OnDemand — never a parent of CORE |
+| OnDemand | ODDY's subsidiary — free-trade-zone + international logistics (untaxed). Not commerce |
+| COMITA | Commerce — goods only ("cuenta y orden"). Never services |
+| FACILIA | Facility services — cleaning, maintenance, operational continuity. Never goods |
 | CORE Logistics | Technology layer for OnDemand |
 | CORE Market | Technology layer for COMITA |
 | CORE Rep, CORE Intelligence, CORE Finance | Transversal capabilities, not tied to a single operator |
@@ -62,9 +66,9 @@ Incomplete modules must remain explicit placeholders. Do not invent product capa
 
 - No `COMITIA` occurrence.
 - No claim that OnDemand is commerce.
-- No claim that ODDY is the logistics operator.
-- No representation of ODDY as CORE's parent (ODDY → CORE as a parent/child relationship).
-- No modification of the ODDY logo.
+- No claim that COMITA provides services or that FACILIA transacts goods.
+- No representation of ODDY as CORE's parent (ODDY → CORE as a parent/child relationship). ODDY *is* correctly described as a logistics operator and as OnDemand's parent — that is not a violation of this criterion, which is specifically about ODDY vs. CORE.
+- No modification of the ODDY or FACILIA logos.
 - No modification of D3-C.
 - No hardcoded deployment hostname in application logic.
 - Existing Brand Guidelines remain navigable.

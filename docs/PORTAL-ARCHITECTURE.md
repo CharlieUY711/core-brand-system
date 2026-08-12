@@ -27,6 +27,7 @@ The portal uses one canonical domain with path-based sections rather than multip
 /architecture/oddy
 /architecture/ondemand
 /architecture/comita
+/architecture/facilia
 /resources
 /resources/assets
 /resources/icons
@@ -50,20 +51,31 @@ The approved CORE Brand & System artifact is the visual and conceptual baseline 
 
 CHARLIE sits above CORE conceptually (vision, governance). CORE is the
 vertex — the Business Operating System that orchestrates and executes.
-ODDY, OnDemand and COMITA are peer entities under CORE. **ODDY must never
-be rendered as CORE's parent.**
+ODDY, COMITA and FACILIA are peer entities directly under CORE. OnDemand
+is **ODDY's subsidiary**, not CORE's peer — it is nested one level below
+ODDY. **ODDY must never be rendered as CORE's parent**, but it *is* a
+logistics operator itself (this is a deliberate correction from an
+earlier draft of this document, which said the opposite).
 
 ```text
-                CHARLIE
-           Vision · Governance
-                   |
-                  CORE
-      Business Operating System
-      Platform · Intelligence · Orchestration
-        __________|__________
-       |          |          |
-     ODDY      OnDemand    COMITA
-   Ecosystem   Logistics   Commerce
+                         CHARLIE
+                  VISION · GOVERNANCE
+                           |
+                         CORE
+             BUSINESS OPERATING SYSTEM
+          PLATFORM · INTELLIGENCE · ORCHESTRATION
+              ______________|______________
+             |              |              |
+           ODDY           COMITA         FACILIA
+      (logistics brain,   Goods only    Services only
+       territory /         ("cuenta       (cleaning,
+       last-mile,           y orden")     maintenance,
+       taxed)                             continuity)
+             |
+         OnDemand
+    (free-trade-zone +
+     international,
+     untaxed)
 ```
 
 ## Technology layers
@@ -76,7 +88,8 @@ be rendered as CORE's parent.**
 
 - `Charlie` is vision and governance — the top conceptual level. It is not a product, not an application, not an operating vertical.
 - `CORE` is the Business Operating System: platform, intelligence, orchestration. It executes the vision Charlie defines. It is the vertex of the operational model, never a child of ODDY.
-- `ODDY` is an ecosystem/brand entity that CORE connects, alongside OnDemand and COMITA. It must never be rendered or described as CORE's parent, and never as the logistics operator.
-- `OnDemand` is logistics operations, including free-zone and regional operations. It is **not commerce**.
-- `COMITA` is commerce.
+- `ODDY` (from "OnDemand Delivery") is the ecosystem's logistics brain **and** the operator within the domestic territory — last-mile and related operations, under standard taxation. It is the parent of OnDemand. It must never be rendered or described as CORE's parent.
+- `OnDemand` is ODDY's subsidiary, responsible for logistics in free-trade-zone territory and international transport (untaxed). It is **not commerce**.
+- `COMITA` imports and commercializes goods on behalf of clients ("cuenta y orden"). Goods only — **never services**.
+- `FACILIA` delivers on-site client services (cleaning, maintenance, operational continuity). Services only — **never goods**. FACILIA already has its own brand identity; like ODDY, it is never redesigned.
 - `COMITIA` is not a valid name and must never appear in the production portal.

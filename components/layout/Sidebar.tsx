@@ -38,6 +38,7 @@ const groups: NavGroup[] = [
       { label: "ODDY", href: "/architecture/oddy", live: true },
       { label: "OnDemand", href: "/architecture/ondemand", live: true },
       { label: "COMITA", href: "/architecture/comita", live: true },
+      { label: "FACILIA", href: "/architecture/facilia", live: true },
     ],
   },
   {

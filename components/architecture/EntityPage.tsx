@@ -32,12 +32,13 @@ export default function EntityPage({ entity }: { entity: Entity }) {
 
       {entity.immutable && (
         <div className={`${styles.callout} ${styles.error}`}>
-          <span className={styles.calloutTag}>ODDY BRAND ASSET — IMMUTABLE</span>
+          <span className={styles.calloutTag}>{entity.name} BRAND ASSET — IMMUTABLE</span>
           <p>
-            Never redrawn, modified or reinterpreted. Official file not available in this
-            repository yet — reference placeholder:
+            {entity.name} already has its own identity. Never redrawn, modified or
+            reinterpreted. Official file not available in this repository yet — reference
+            placeholder:
           </p>
-          <div className={styles.placeholder}>ODDY OFFICIAL ASSET — INSERT OFFICIAL FILE</div>
+          <div className={styles.placeholder}>{entity.name} OFFICIAL ASSET — INSERT OFFICIAL FILE</div>
         </div>
       )}
     </>

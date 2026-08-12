@@ -25,7 +25,8 @@ export default function Home() {
           <h2 className={styles.modelTitle}>One system. Clear responsibilities.</h2>
           <p className={styles.modelLede}>
             Charlie defines. CORE orchestrates and executes. The entities and
-            operations — ODDY, OnDemand, COMITA — run the business.
+            operations — ODDY (with OnDemand), COMITA, FACILIA — run the
+            business.
           </p>
           <CorporateModel />
         </section>

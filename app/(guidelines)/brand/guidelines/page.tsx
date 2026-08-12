@@ -257,9 +257,11 @@ export default function BrandGuidelinesPage() {
         <CorporateModel />
         <div className={s.card} style={{ border: "1.5px solid var(--core-signal)", background: "rgba(14,138,130,.06)", textAlign: "center", marginTop: 26, maxWidth: 640 }}>
           <p style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 13.5, margin: 0 }}>
-            Charlie defines. CORE orchestrates and executes. OnDemand operates
-            logistics. COMITA develops commerce. ODDY is a brand and ecosystem
-            entity within the system — never a parent of CORE.
+            Charlie defines. CORE orchestrates and executes. ODDY operates
+            territory logistics and is the parent of OnDemand, which
+            operates free-trade-zone and international logistics. COMITA
+            trades goods; FACILIA delivers services. ODDY is never a parent
+            of CORE.
           </p>
         </div>
       </BrandSection>
