@@ -44,8 +44,9 @@ operator, not just a brand/ecosystem label.
 | OnDemand | ODDY's subsidiary — free-trade-zone + international logistics (untaxed). Not commerce |
 | COMITA | Commerce — goods only ("cuenta y orden"). Never services |
 | FACILIA | Facility services — cleaning, maintenance, operational continuity. Never goods |
-| CORE Logistics | Technology layer for OnDemand |
-| CORE Market | Technology layer for COMITA |
+| CORE Logistics | Technology layer for the logistics function — ODDY **and** OnDemand, each in its own territory |
+| CORE Market | Technology layer for COMITA (goods only) |
+| CORE Services | Technology layer for FACILIA (services only) |
 | CORE Rep, CORE Intelligence, CORE Finance | Transversal capabilities, not tied to a single operator |
 
 ## First production milestone
@@ -67,6 +68,7 @@ Incomplete modules must remain explicit placeholders. Do not invent product capa
 - No `COMITIA` occurrence.
 - No claim that OnDemand is commerce.
 - No claim that COMITA provides services or that FACILIA transacts goods.
+- No claim that CORE itself operates logistics — CORE is the platform/orchestration layer; ODDY and OnDemand are the operators.
 - No representation of ODDY as CORE's parent (ODDY → CORE as a parent/child relationship). ODDY *is* correctly described as a logistics operator and as OnDemand's parent — that is not a violation of this criterion, which is specifically about ODDY vs. CORE.
 - No modification of the ODDY or FACILIA logos.
 - No modification of D3-C.

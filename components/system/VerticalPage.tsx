@@ -6,9 +6,10 @@ import { entities } from "@/lib/content/entities";
 import styles from "./VerticalPage.module.css";
 
 export default function VerticalPage({ vertical }: { vertical: Vertical }) {
-  const relatedEntity = vertical.relation
-    ? entities.find((e) => vertical.relation!.href.endsWith(e.slug))
-    : undefined;
+  const flowEntity =
+    vertical.showFlow && vertical.relations?.[0]
+      ? entities.find((e) => vertical.relations![0].href.endsWith(e.slug))
+      : undefined;
 
   return (
     <>
@@ -16,19 +17,20 @@ export default function VerticalPage({ vertical }: { vertical: Vertical }) {
 
       {vertical.note && <p className={styles.note}>{vertical.note}</p>}
 
-      {vertical.showFlow && relatedEntity && (
-        <TechnologyLayer operator={relatedEntity.name} operatorRole={relatedEntity.tag} layer={vertical.name} />
+      {flowEntity && (
+        <TechnologyLayer operator={flowEntity.name} operatorRole={flowEntity.tag} layer={vertical.name} />
       )}
 
-      {vertical.relation && (
+      {vertical.relations && vertical.relations.length > 0 && (
         <div className={styles.relation}>
-          <span className={styles.relationTag}>Relation</span>
-          <p>
-            {vertical.relation.label} —{" "}
-            <Link href={vertical.relation.href} className={styles.relationLink}>
-              see Corporate Architecture
-            </Link>
-          </p>
+          <span className={styles.relationTag}>{vertical.relations.length > 1 ? "Relations" : "Relation"}</span>
+          <ul className={styles.relationList}>
+            {vertical.relations.map((r) => (
+              <li key={r.href}>
+                {r.label} — <Link href={r.href} className={styles.relationLink}>see Corporate Architecture</Link>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </>

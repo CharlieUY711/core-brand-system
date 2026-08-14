@@ -26,6 +26,7 @@ const groups: NavGroup[] = [
       { label: "CORE Logistics", href: "/system/logistics", live: true },
       { label: "CORE Rep", href: "/system/rep", live: true },
       { label: "CORE Market", href: "/system/market", live: true },
+      { label: "CORE Services", href: "/system/services", live: true },
       { label: "CORE Intelligence", href: "/system/intelligence", live: true },
       { label: "CORE Finance", href: "/system/finance", live: true },
     ],

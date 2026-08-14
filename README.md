@@ -14,9 +14,10 @@ This repository contains the public-facing CORE Brand & System portal and its su
 - CORE Orbit
 
 ### System
-- CORE Logistics — technology layer for OnDemand logistics operations
+- CORE Logistics — technology layer for the logistics function: ODDY + OnDemand, each in its own territory
 - CORE Rep
-- CORE Market — technology layer for COMITA commerce
+- CORE Market — technology layer for COMITA (goods only)
+- CORE Services — technology layer for FACILIA (services only)
 - CORE Intelligence
 - CORE Finance
 

@@ -20,6 +20,7 @@ The portal uses one canonical domain with path-based sections rather than multip
 /system/logistics
 /system/rep
 /system/market
+/system/services
 /system/intelligence
 /system/finance
 /architecture
@@ -57,6 +58,12 @@ ODDY. **ODDY must never be rendered as CORE's parent**, but it *is* a
 logistics operator itself (this is a deliberate correction from an
 earlier draft of this document, which said the opposite).
 
+ODDY and OnDemand belong to the **same business function: LOGISTICS** —
+each simply operates in its own territory of competence (domestic/taxed
+for ODDY, free-zone+international/untaxed for OnDemand). Both may
+transport, transform, kit or prepare merchandise within their own
+territory.
+
 ```text
                          CHARLIE
                   VISION · GOVERNANCE
@@ -80,8 +87,21 @@ earlier draft of this document, which said the opposite).
 
 ## Technology layers
 
-- CORE Logistics = technology layer for OnDemand logistics operations
-- CORE Market = technology layer for COMITA commerce
+```text
+CORE Logistics
+    +-- ODDY       (territory / last-mile)
+    +-- OnDemand   (free zone / international)
+
+CORE Market
+    +-- COMITA     (goods only)
+
+CORE Services
+    +-- FACILIA    (services only)
+```
+
+- CORE Logistics = technology layer for the logistics function — serves **both** ODDY and OnDemand, each in its own territory. It does not serve OnDemand alone.
+- CORE Market = technology layer for COMITA (goods commerce only)
+- CORE Services = technology layer for FACILIA (services only)
 - CORE Rep, CORE Intelligence, CORE Finance = transversal capabilities, not tied to a single operator
 
 ## Terminology constraints
