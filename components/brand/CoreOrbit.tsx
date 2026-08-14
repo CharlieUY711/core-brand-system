@@ -1,21 +1,17 @@
+import { entities } from "@/lib/content/entities";
 import styles from "./CoreOrbit.module.css";
 
-type OrbitCompany = {
-  name: string;
-  category: string;
-  color: string;
-  x: number;
-  y: number;
-};
-
-// Fixed composition — positions computed on a 230/130 ellipse at -20°,
-// matching the CORE Brand & System v1.0 artifact exactly.
-const companies: OrbitCompany[] = [
-  { name: "ODDY", category: "ECOSYSTEM", color: "#1D5FD6", x: 491.8, y: 187.5 },
-  { name: "On Demand", category: "LOGISTICS", color: "#2AA8D8", x: 463.0, y: 352.6 },
-  { name: "COMITA", category: "COMMERCE", color: "#1F7A4D", x: 209.0, y: 445.1 },
-  { name: "FACILIA", category: "SERVICES", color: "#16264A", x: 80.7, y: 337.1 },
-  { name: "Charlie", category: "TECHNOLOGY", color: "#D9641C", x: 255.5, y: 177.8 },
+// Pure layout data — positions on a 230/130 ellipse at -20°, matching the
+// CORE Brand & System v1.0 artifact exactly. Name, category and color are
+// NOT duplicated here: they come from lib/content/entities.ts, the single
+// source of truth for the corporate roster, so CORE Orbit can never drift
+// out of sync with Corporate Architecture again.
+const layout: { slug: "oddy" | "ondemand" | "comita" | "facilia" | "charlie"; x: number; y: number }[] = [
+  { slug: "oddy", x: 491.8, y: 187.5 },
+  { slug: "ondemand", x: 463.0, y: 352.6 },
+  { slug: "comita", x: 209.0, y: 445.1 },
+  { slug: "facilia", x: 80.7, y: 337.1 },
+  { slug: "charlie", x: 255.5, y: 177.8 },
 ];
 
 /**
@@ -41,14 +37,18 @@ export default function CoreOrbit() {
           transform="rotate(-20 300 300)"
         />
         <use href="#core-symbol-master" x="235" y="235" width="130" height="130" className={styles.hub} />
-        {companies.map((c) => (
-          <g key={c.name} transform={`translate(${c.x},${c.y})`}>
-            <rect x="-64" y="-19" width="128" height="38" rx="8" fill="var(--core-surface)" stroke="var(--core-line)" />
-            <circle cx="-48" cy="0" r="5" fill={c.color} />
-            <text x="-36" y="-1" className={styles.name}>{c.name}</text>
-            <text x="-36" y="12" className={styles.category}>{c.category}</text>
-          </g>
-        ))}
+        {layout.map((pos) => {
+          const entity = entities.find((e) => e.slug === pos.slug);
+          if (!entity) return null;
+          return (
+            <g key={entity.slug} transform={`translate(${pos.x},${pos.y})`}>
+              <rect x="-64" y="-19" width="128" height="38" rx="8" fill="var(--core-surface)" stroke="var(--core-line)" />
+              <circle cx="-48" cy="0" r="5" fill={entity.orbitColor} />
+              <text x="-36" y="-1" className={styles.name}>{entity.name}</text>
+              <text x="-36" y="12" className={styles.category}>{entity.orbitCategory}</text>
+            </g>
+          );
+        })}
       </svg>
     </div>
   );

@@ -41,6 +41,16 @@ export type Entity = {
   /** Slug of the entity this one is a subsidiary of, for rendering as a
    * nested branch instead of a direct peer under CORE. */
   parent?: "oddy";
+  /** Short (one-word-ish) function label for compact visual contexts —
+   * e.g. CORE Orbit's orbit chips — where the full `tag` is too long.
+   * Kept in sync with the absolute rules: ODDY/OnDemand = LOGISTICS,
+   * FACILIA = SERVICES, COMITA = COMMERCE, CHARLIE = ECOSYSTEM. */
+  orbitCategory?: string;
+  /** Reference accent color for compact visual contexts (CORE Orbit).
+   * Distinct from CORE's own design tokens — this is each entity's own
+   * approximate identity color for visual differentiation in a
+   * composition, not a CORE Ink/Signal value. */
+  orbitColor?: string;
 };
 
 export const entities: Entity[] = [
@@ -55,6 +65,8 @@ export const entities: Entity[] = [
       "Not an operating vertical",
       "Sits above CORE conceptually — vision and governance, not execution",
     ],
+    orbitCategory: "ECOSYSTEM",
+    orbitColor: "#D9641C",
   },
   {
     slug: "oddy",
@@ -68,6 +80,8 @@ export const entities: Entity[] = [
       "Operates under standard taxation (domestic / \"plaza\")",
     ],
     immutable: true,
+    orbitCategory: "LOGISTICS",
+    orbitColor: "#1D5FD6",
   },
   {
     slug: "ondemand",
@@ -83,6 +97,8 @@ export const entities: Entity[] = [
     restriction:
       "OnDemand IS NOT COMMERCE. It must not be described as commerce, marketplace, retailer, e-commerce or commercial operation.",
     parent: "oddy",
+    orbitCategory: "LOGISTICS",
+    orbitColor: "#2AA8D8",
   },
   {
     slug: "comita",
@@ -96,6 +112,8 @@ export const entities: Entity[] = [
     ],
     restriction: "COMITA does not provide services. Service delivery is FACILIA's function, not COMITA's.",
     rule: "COMITA = GOODS COMMERCE",
+    orbitCategory: "COMMERCE",
+    orbitColor: "#1F7A4D",
   },
   {
     slug: "facilia",
@@ -111,5 +129,7 @@ export const entities: Entity[] = [
     restriction: "FACILIA does not transact goods. Goods commerce is COMITA's function, not FACILIA's.",
     rule: "FACILIA = SERVICES",
     immutable: true,
+    orbitCategory: "SERVICES",
+    orbitColor: "#16264A",
   },
 ];
