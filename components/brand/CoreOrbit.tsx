@@ -1,18 +1,33 @@
 import { entities } from "@/lib/content/entities";
 import styles from "./CoreOrbit.module.css";
 
-// Pure layout data — positions on a 230/130 ellipse at -20°, matching the
-// CORE Brand & System v1.0 artifact exactly. Name, category and color are
-// NOT duplicated here: they come from lib/content/entities.ts, the single
-// source of truth for the corporate roster, so CORE Orbit can never drift
-// out of sync with Corporate Architecture again.
-const layout: { slug: "oddy" | "ondemand" | "comita" | "facilia" | "charlie"; x: number; y: number }[] = [
-  { slug: "oddy", x: 491.8, y: 187.5 },
-  { slug: "ondemand", x: 463.0, y: 352.6 },
-  { slug: "comita", x: 209.0, y: 445.1 },
-  { slug: "facilia", x: 80.7, y: 337.1 },
-  { slug: "charlie", x: 255.5, y: 177.8 },
-];
+// Order around the orbit, not coordinates. ODDY and its subsidiary OnDemand
+// sit together; then the four business brands endorsed by CORE; Charlie
+// closes the ring. Name, category and color are NOT duplicated here: they
+// come from lib/content/entities.ts, the single source of truth for the
+// corporate roster, so CORE Orbit can never drift out of sync with
+// Corporate Architecture again.
+const ORDER = ["oddy", "ondemand", "comita", "facilia", "kora", "alma", "charlie"] as const;
+
+// Ellipse of the dashed guide below: 230/130 at -20°, from CORE Brand &
+// System v1.0. Positions used to be five hardcoded pairs, evenly spaced
+// every 72°. They are derived now because the even spacing IS the
+// composition — with the roster grown to seven, freezing the old pixel
+// values would have kept five points exact and jammed two into the gaps,
+// breaking the regularity the artifact was built on. Deriving them keeps
+// the pattern true for any roster size, and adding an entity no longer
+// means recomputing coordinates by hand.
+const CX = 300, CY = 300, RX = 230, RY = 130, TILT = (-20 * Math.PI) / 180;
+const PHASE = (342 * Math.PI) / 180; // keeps ODDY where v1.0 placed it
+
+const layout = ORDER.map((slug, i) => {
+  const t = PHASE + (i * 2 * Math.PI) / ORDER.length;
+  return {
+    slug,
+    x: CX + RX * Math.cos(t) * Math.cos(TILT) - RY * Math.sin(t) * Math.sin(TILT),
+    y: CY + RX * Math.cos(t) * Math.sin(TILT) + RY * Math.sin(t) * Math.cos(TILT),
+  };
+});
 
 /**
  * CORE Orbit — a compositional graphic resource of the system.

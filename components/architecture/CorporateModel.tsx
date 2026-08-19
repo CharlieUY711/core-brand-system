@@ -40,7 +40,7 @@ export default function CorporateModel({ locale: localeOverride }: { locale?: Lo
   const { locale: activeLocale } = useLocale();
   const locale = localeOverride ?? activeLocale;
 
-  const caption = (slug: "charlie" | "core" | "oddy" | "ondemand" | "comita" | "facilia"): string =>
+  const caption = (slug: keyof (typeof dictionaries)["es"]["architecture"]["diagram"]): string =>
     dictionaries[locale].architecture.diagram[slug];
 
   return (
@@ -63,14 +63,14 @@ export default function CorporateModel({ locale: localeOverride }: { locale?: Lo
               <div className={styles.stem} />
               <Link href={`/architecture/${entity.slug}`} className={`${styles.node} ${styles.leaf}`}>
                 <div className={styles.t}>{entity.name}</div>
-                <div className={styles.d}>{caption(entity.slug as "oddy" | "comita" | "facilia")}</div>
+                <div className={styles.d}>{caption(entity.slug)}</div>
               </Link>
               {child && (
                 <>
                   <div className={styles.stem} />
                   <Link href={`/architecture/${child.slug}`} className={`${styles.node} ${styles.child}`}>
                     <div className={styles.t}>{child.name}</div>
-                    <div className={styles.d}>{caption(child.slug as "ondemand")}</div>
+                    <div className={styles.d}>{caption(child.slug)}</div>
                   </Link>
                 </>
               )}

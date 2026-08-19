@@ -47,6 +47,8 @@ const groups: NavGroup[] = [
       { key: "ondemand", href: "/architecture/ondemand", live: true },
       { key: "comita", href: "/architecture/comita", live: true },
       { key: "facilia", href: "/architecture/facilia", live: true },
+      { key: "kora", href: "/architecture/kora", live: true },
+      { key: "alma", href: "/architecture/alma", live: true },
     ],
   },
   {

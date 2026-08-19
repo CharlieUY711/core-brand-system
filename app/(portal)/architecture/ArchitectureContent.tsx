@@ -54,6 +54,14 @@ export default function ArchitectureContent() {
             <td>FACILIA</td>
             <td>{t("architecture.tableRoles.facilia")}</td>
           </tr>
+          <tr>
+            <td>KORA</td>
+            <td>{t("architecture.tableRoles.kora")}</td>
+          </tr>
+          <tr>
+            <td>ALMA</td>
+            <td>{t("architecture.tableRoles.alma")}</td>
+          </tr>
         </tbody>
       </table>
     </PageContainer>

@@ -7,13 +7,15 @@
 //                  CORE   (Business Operating System — platform,
 //                          intelligence, orchestration; executes the
 //                          vision Charlie defines)
-//        ___________|_______________________
-//       |                |                  |
-//     ODDY             COMITA             FACILIA
-//  logistics brain +   Goods (cuenta      Services (cleaning,
-//  territory operator  y orden)           maintenance, operational
-//       |              — no services      continuity) — no goods
-//   OnDemand
+//        ___________|________________________________________
+//       |             |            |           |             |
+//     ODDY          COMITA      FACILIA      KORA          ALMA
+//  logistics       Goods       Services    Technology,   People,
+//  brain +        (cuenta y   (cleaning,   own products  talent,
+//  territory      orden)      maintenance, and systems    HR
+//  operator       — no        operational
+//       |         services    continuity)
+//   OnDemand                  — no goods
 //  free-trade-zone +
 //  international
 //  transport
@@ -23,9 +25,12 @@
 // operator within the (taxed) domestic territory, including last-mile —
 // it IS a logistics operator, and it is the parent of OnDemand, its
 // subsidiary for free-trade-zone and international transport (untaxed).
-// COMITA and FACILIA are peer entities under CORE, mutually exclusive by
-// design: COMITA only transacts goods (import / "cuenta y orden"),
-// FACILIA only provides services — neither does the other's function.
+// COMITA, FACILIA, KORA and ALMA are peer entities under CORE. COMITA and
+// FACILIA are mutually exclusive by design: COMITA only transacts goods
+// (import / "cuenta y orden"), FACILIA only provides services — neither
+// does the other's function. KORA holds the group's own technology —
+// software, platforms, configurators, systems and methods — and ALMA holds
+// people, talent and development. Both are endorsed as "by CORE".
 // ODDY must never be represented as CORE's parent.
 // COMITA is the only correct spelling. "COMITIA" must never appear.
 //
@@ -38,7 +43,7 @@
 // content can never accidentally alter a corporate relationship, and so the
 // entity data has no locale dependency at all.
 
-export type EntitySlug = "charlie" | "oddy" | "ondemand" | "comita" | "facilia";
+export type EntitySlug = "charlie" | "oddy" | "ondemand" | "comita" | "facilia" | "kora" | "alma";
 
 /** Shape of the editorial content each entity has in
  * lib/i18n/dictionaries/{es,pt}.ts under `entities.<slug>`. Declared here,
@@ -113,5 +118,17 @@ export const entities: Entity[] = [
     immutable: true,
     orbitCategory: "SERVICES",
     orbitColor: "#D97400", // Orange — color distintivo de la unidad
+  },
+  {
+    slug: "kora",
+    name: "KORA",
+    orbitCategory: "TECHNOLOGY",
+    orbitColor: "#6D3FA3", // Violeta KORA
+  },
+  {
+    slug: "alma",
+    name: "ALMA",
+    orbitCategory: "PEOPLE",
+    orbitColor: "#9B3050", // Granate ALMA
   },
 ];
