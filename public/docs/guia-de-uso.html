@@ -1,0 +1,270 @@
+<title>Guía de Uso de Marca</title>
+<style>
+  :root{
+    --paper:#fbfbfa; --card:#ffffff; --ink:#16181d; --ink-2:#3a4353;
+    --muted:#6b7180; --line:#e0e2e6; --line-soft:#eceef1; --chip:#f4f5f7;
+    --warn:#a8741a; --stop:#b0463a;
+    --font-doc:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif;
+    --font-ui:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --font-mono:ui-monospace,"SFMono-Regular","Cascadia Mono",Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#14161a; --card:#1a1d22; --ink:#e8eaee; --ink-2:#b9c0cc;
+      --muted:#8b93a1; --line:#2b3038; --line-soft:#23272e; --chip:#20242a;
+      --warn:#d3a04a; --stop:#e0776a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#14161a; --card:#1a1d22; --ink:#e8eaee; --ink-2:#b9c0cc;
+    --muted:#8b93a1; --line:#2b3038; --line-soft:#23272e; --chip:#20242a;
+    --warn:#d3a04a; --stop:#e0776a;
+  }
+
+  body{background:var(--paper);color:var(--ink);font-family:var(--font-ui);
+    font-size:12.5px;line-height:1.55;margin:0;padding:30px 22px 44px;
+    -webkit-font-smoothing:antialiased;}
+  .sheet{max-width:820px;margin:0 auto;}
+
+  header{border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:4px;}
+  h1{font-family:var(--font-doc);font-weight:400;font-size:27px;margin:0 0 4px;}
+  .sub{font-size:12px;color:var(--ink-2);margin:0;}
+  .meta{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+
+  h2{font-family:var(--font-doc);font-weight:400;font-size:17px;margin:26px 0 3px;
+    padding-bottom:6px;border-bottom:1px solid var(--line);}
+  h3{font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);
+    font-weight:600;margin:14px 0 6px;}
+  p{margin:0 0 9px;max-width:74ch;}
+  .lede{color:var(--ink-2);font-size:12.5px;margin:0 0 12px;}
+
+  table{border-collapse:collapse;width:100%;font-size:11px;margin:4px 0 0;}
+  th{font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+    font-weight:600;text-align:left;padding:0 10px 6px 0;border-bottom:1px solid var(--line);}
+  td{padding:7px 10px 7px 0;border-bottom:1px solid var(--line-soft);vertical-align:top;}
+  code{font-family:var(--font-mono);font-size:10px;background:var(--chip);
+    padding:1px 4px;border-radius:2px;}
+  .scroll{overflow-x:auto;}
+
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:12px 14px;}
+
+  ol,ul{margin:0 0 9px;padding-left:18px;}
+  li{margin-bottom:4px;}
+
+  .rule{border-left:3px solid var(--stop);background:var(--card);padding:9px 13px;
+    margin:0 0 10px;font-size:11.5px;}
+  .rule b{color:var(--stop);}
+  .warn{border-left:3px solid var(--warn);background:var(--card);padding:9px 13px;
+    margin:0 0 10px;font-size:11.5px;}
+  .warn b{color:var(--warn);}
+  .note{font-size:10px;color:var(--muted);line-height:1.5;margin-top:7px;
+    padding-left:9px;border-left:2px solid var(--line);}
+
+  .sw{display:inline-flex;align-items:center;gap:5px;margin-right:10px;font-size:10.5px;}
+  .sw i{width:11px;height:11px;border-radius:2px;
+    box-shadow:inset 0 0 0 1px rgba(128,128,128,.3);}
+
+  .flow{background:var(--card);border:1px solid var(--line);border-radius:4px;
+    padding:13px 15px;font-size:11.5px;}
+  .flow div{padding:4px 0;border-bottom:1px dotted var(--line);}
+  .flow div:last-child{border-bottom:0;}
+  .flow b{font-family:var(--font-doc);font-weight:400;font-size:13px;}
+
+  footer{margin-top:26px;padding-top:12px;border-top:2px solid var(--ink);
+    font-size:10px;color:var(--muted);line-height:1.5;}
+
+  @media print{
+    @page{size:A4;margin:14mm;}
+    body{padding:0;font-size:9.5pt;line-height:1.45;background:#fff;color:#000;}
+    .sheet{max-width:none;}
+    .scroll{overflow:visible;}
+    h2{break-after:avoid;font-size:14pt;}
+    tr,.card,.rule,.warn,.flow{break-inside:avoid;}
+    .pagebreak{break-before:page;}
+  }
+</style>
+
+<div class="sheet">
+  <header>
+    <h1>Guía de Uso de Marca</h1>
+    <p class="sub">Ecosistema CORE · Cómo usar los logotipos, colores y tipografías del sistema</p>
+    <div class="meta">Referencia operativa · 18 · 08 · 2026</div>
+  </header>
+
+  <h2>1 · Para qué sirve</h2>
+  <p class="lede">Para que cada marca se vea siempre igual a sí misma, y para que las seis
+  juntas se lean como una familia y no como seis empresas sin relación.</p>
+  <p>Antes de este sistema, cada marca vivía en su propio repositorio con lo que hubiera a
+  mano: un PNG suelto acá, un SVG dibujado con texto allá, colores repetidos a ojo en el
+  código. Dos marcas hermanas podían usar tipografías distintas sin que nadie lo notara.</p>
+  <p>Ahora hay <strong>un paquete por marca</strong>, con los archivos ya listos para web,
+  redes, documentos y presentaciones. La regla de oro es simple:</p>
+  <div class="rule"><b>Usá el archivo del paquete.</b> No recrees un logo escribiendo el
+  nombre en un editor, no lo saques de una captura de pantalla, no lo recolorees, no lo
+  estires. Si el archivo que necesitás no está, pedilo — no lo improvises.</div>
+
+  <h2>2 · Cómo está organizado el ecosistema</h2>
+  <div class="flow">
+    <div><b>Charlie</b> — el ecosistema. Visión y gobernanza. No se vende: enmarca.</div>
+    <div><b>CORE</b> — la plataforma que ejecuta. Además actúa como <em>marca madre</em>.</div>
+    <div><b>FACILIA by CORE</b> · <b>COMITA by CORE</b> — marcas de negocio propias, respaldadas por CORE.</div>
+    <div><b>ODDY</b> — marca logística y operador territorial.</div>
+    <div><b>OnDemand by ODDY</b> — submarca de ODDY: transporte internacional y freight.</div>
+  </div>
+  <p style="margin-top:10px">El <code>by CORE</code> y el <code>by ODDY</code> son
+  <strong>endosos</strong>: dicen quién respalda a la marca, sin reemplazar su nombre.
+  FACILIA no es "un producto de CORE"; es FACILIA, respaldada por CORE.</p>
+
+  <h2>3 · Qué logo usar</h2>
+  <p class="lede">Cada marca endosada tiene <strong>dos logos</strong>. Elegir entre ellos es
+  la decisión más frecuente y la más fácil de equivocar.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>El logotipo suelto</h3>
+      <p style="margin:0">Cuando ya está claro de quién es la pieza: el sitio propio de la
+      marca, su avatar de redes, el interior de un documento suyo, un cartel en su local.</p>
+    </div>
+    <div class="card">
+      <h3>El logotipo con endoso</h3>
+      <p style="margin:0">Cuando la marca aparece ante alguien que no la conoce, o junto a
+      otras: portadas de propuestas y presupuestos, home del sitio, material comercial,
+      firmas de correo, presentaciones.</p>
+    </div>
+  </div>
+  <div class="note">Ante la duda, usá el que lleva endoso. Sobra contexto, nunca falta.</div>
+
+  <h2>4 · Dónde están los archivos</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th style="width:110px">Marca</th><th style="width:110px">Repositorio</th><th style="width:190px">Ruta</th><th>Contenido</th></tr></thead>
+    <tbody>
+      <tr><td>Charlie</td><td>Charlie</td><td><code>brand/charlie/</code></td><td>7 SVG + 23 PNG</td></tr>
+      <tr><td>CORE</td><td>CORE</td><td><code>brand/sistema-b-d3c/</code></td><td>7 SVG + 15 PNG</td></tr>
+      <tr><td>ODDY</td><td>ODDY</td><td><code>brand/oddy/</code></td><td>18 PNG</td></tr>
+      <tr><td>OnDemand</td><td>ODDY</td><td><code>brand/ondemand/</code></td><td>9 SVG + 25 PNG</td></tr>
+      <tr><td>FACILIA</td><td>FACILIA</td><td><code>brand/facilia/</code></td><td>7 PNG</td></tr>
+      <tr><td>COMITA</td><td>COMITA</td><td><code>brand/comita/</code></td><td>10 SVG + 27 PNG</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="margin-top:9px">En cada carpeta, los nombres dicen para qué sirve el archivo:
+  <code>logo-*</code> es el logotipo suelto, <code>by-core-*</code> o <code>by-oddy-*</code>
+  el que lleva endoso, <code>avatar-*</code> el cuadrado para perfiles de redes, y
+  <code>favicon-*</code> el del navegador. El número final es el ancho en píxeles: usá 2048
+  para impresión y 1024 para pantalla.</p>
+  <p>Cada carpeta tiene además un <code>README.md</code> con el detalle de esa marca y un
+  <code>build-assets.js</code> que regenera todo el paquete.</p>
+  <div class="note">Los paquetes viven dentro de cada repositorio, no en un drive aparte.
+  Para usarlos hay que tener el repo: clonalo y entrá a <code>brand/</code>. Así los assets
+  y sus generadores nunca se desincronizan.</div>
+
+  <div class="pagebreak"></div>
+
+  <h2>5 · Reglas por marca</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th style="width:100px">Marca</th><th style="width:190px">Colores</th><th style="width:150px">Tipografía</th><th>Regla propia</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Charlie</strong></td>
+        <td><span class="sw"><i style="background:#F26522"></i>#F26522</span>
+            <span class="sw"><i style="background:#1A1A1A"></i>#1A1A1A</span>
+            <span class="sw"><i style="background:#FFFFFF"></i>#FFFFFF</span></td>
+        <td>Helvetica / Helvetica&nbsp;Neue<br><span style="color:var(--muted)">web: Inter</span></td>
+        <td>Va en <strong>naranja sobre blanco o sobre negro</strong>. El naranja es la tinta, no el fondo.</td>
+      </tr>
+      <tr>
+        <td><strong>CORE</strong></td>
+        <td><span class="sw"><i style="background:#152238"></i>#152238</span>
+            <span class="sw"><i style="background:#0E8A82"></i>#0E8A82</span></td>
+        <td>IBM Plex Sans<br><span style="color:var(--muted)">mono: IBM Plex Mono</span></td>
+        <td>Símbolo D3-C. Su geometría está congelada: no se altera ni se redibuja.</td>
+      </tr>
+      <tr>
+        <td><strong>ODDY</strong></td>
+        <td><span class="sw"><i style="background:#0B2A61"></i>#0B2A61</span>
+            <span class="sw"><i style="background:#0169F5"></i>#0169F5</span></td>
+        <td>Poppins Medium<br><span style="color:var(--muted)">texto: Liberation Sans</span></td>
+        <td><strong>Sólo sobre fondos claros.</strong> Ver la advertencia abajo.</td>
+      </tr>
+      <tr>
+        <td><strong>OnDemand</strong></td>
+        <td colspan="2" style="color:var(--muted)">Hereda todo de ODDY. No tiene colores ni letra propios.</td>
+        <td>Siempre como <code>OnDemand by ODDY</code> fuera de contexto interno.</td>
+      </tr>
+      <tr>
+        <td><strong>FACILIA</strong></td>
+        <td><span class="sw"><i style="background:#0B2A61"></i>#0B2A61</span>
+            <span class="sw"><i style="background:#D97400"></i>#D97400</span>
+            <span class="sw"><i style="background:#0169F5"></i>#0169F5</span></td>
+        <td>Poppins Medium<br><span style="color:var(--muted)">texto: Liberation Sans</span></td>
+        <td>Servicios: <strong>Clean · Care · Continuity</strong>. Nunca "Supply".</td>
+      </tr>
+      <tr>
+        <td><strong>COMITA</strong></td>
+        <td><span class="sw"><i style="background:#1F7A4D"></i>#1F7A4D</span>
+            <span class="sw"><i style="background:#161D1A"></i>#161D1A</span>
+            <span class="sw"><i style="background:#FFFFFF"></i>#FFFFFF</span></td>
+        <td>Poppins Medium</td>
+        <td>Se escribe <strong>COMITA</strong>. Nunca con una "i" extra entre la M y la T.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note">Poppins Medium es la letra compartida por ODDY, OnDemand, FACILIA y
+  COMITA. No se eligió por gusto: se identificó midiendo el grosor de trazo del logotipo
+  aprobado de FACILIA. Por eso las cuatro marcas se ven como familia.</div>
+
+  <h2>6 · Lo que no se hace nunca</h2>
+  <ul>
+    <li><strong>Recrear un logo escribiendo el nombre.</strong> Aunque tengas la tipografía correcta, el espaciado no va a coincidir.</li>
+    <li><strong>Recolorearlo.</strong> Ni para que combine con una pieza, ni para una campaña.</li>
+    <li><strong>Estirarlo o deformarlo.</strong> Se escala manteniendo la proporción, siempre.</li>
+    <li><strong>Aplicarle degradados, sombras o contornos.</strong></li>
+    <li><strong>Pegarlo sin aire.</strong> Cada archivo ya trae su margen de respiro incorporado: no lo recortes.</li>
+    <li><strong>Usarlo sobre fondos de bajo contraste</strong> o sobre fotos con detalle detrás del logotipo.</li>
+    <li><strong>Mezclar marcas.</strong> Los colores de una marca no se aplican al logotipo de otra, aunque compartan tipografía.</li>
+  </ul>
+
+  <h2>7 · Límites que conviene conocer</h2>
+  <div class="rule">
+    <b>ODDY se rompe sobre fondo oscuro.</b> Su logotipo combina navy y azul; sobre un fondo
+    navy la primera “D” desaparece y la marca se lee “O DY”. Está verificado. Usalo sólo
+    sobre fondos claros hasta que exista una versión en blanco — que no se puede fabricar
+    recoloreando, porque ese asset no se toca.
+  </div>
+  <div class="warn">
+    <b>Tres marcas tienen isotipo; tres no, y ahí los favicons fallan.</b>
+    <strong>CORE</strong> tiene el D3-C, y <strong>ODDY</strong> el anillo, que
+    <strong>OnDemand</strong> hereda por ser su submarca. En esas tres el favicon funciona:
+    el anillo se lee incluso a 16 px. La única salvedad es CORE, cuyo trazo interior cae por
+    debajo del píxel a 16 px.
+    <strong>Charlie, FACILIA y COMITA no tienen isotipo</strong>: son sólo wordmark, así que
+    a 16 o 32 px el nombre se vuelve una mancha y sus archivos sirven desde 48 px. Resolverlo
+    para esas tres exige diseñar isotipos — decisión de marca pendiente.
+  </div>
+  <div class="warn">
+    <b>FACILIA no tiene master vectorial.</b> Su logotipo aprobado sólo existe como PNG, de
+    modo que sus piezas son composiciones raster. Para impresión grande, usá el archivo de
+    2048 px o pedí el original de diseño.
+  </div>
+
+  <h2>8 · Dos cosas todavía abiertas</h2>
+  <ol>
+    <li><strong>core.com.uy todavía no aplica la identidad de marca.</strong> La identidad de
+    CORE es Brand &amp; System v1.0 —D3-C · Ink · Signal · IBM Plex— pero el sitio en
+    producción aún no la implementa. Migrarlo es un trabajo aparte.</li>
+    <li><strong>La letra del endoso.</strong> En los lockups, el <code>by CORE</code> está
+    compuesto en la tipografía de la marca endosada (Poppins), no en la de CORE. Es una
+    convención razonable, pero si se define que el endoso debe llevar la letra de CORE, hay
+    que regenerar los paquetes — es un cambio de una línea en los generadores.</li>
+  </ol>
+
+  <footer>
+    Los paquetes se regeneran con <code>node build-assets.js</code> dentro de cada carpeta
+    <code>brand\</code>. Los generadores documentan de dónde sale cada valor, así que ningún
+    color ni tipografía de este sistema es una elección improvisada: todos tienen origen
+    verificable en un manual de marca o en el propio asset aprobado.
+  </footer>
+</div>
