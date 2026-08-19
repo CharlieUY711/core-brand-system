@@ -15,6 +15,20 @@ import s from "./guidelines-content.module.css";
 
 export const metadata: Metadata = { title: "Brand Guidelines" };
 
+// Brand Guidelines is approved, frozen content and stays English-only in
+// this pass (see V1.4 i18n report — restructuring its ~100 inline styles is
+// out of scope). verticals.ts's `short` field became {es, pt} in V1.4, so
+// this document keeps its own decoupled English copy for the §19 chips
+// instead of consuming the now-localized field.
+const vertShortEn: Record<string, string> = {
+  logistics: "technology layer for ODDY + OnDemand",
+  rep: "transversal representation capability",
+  market: "technology layer for COMITA",
+  services: "technology layer for FACILIA",
+  intelligence: "transversal intelligence",
+  finance: "transversal financial capability",
+};
+
 export default function BrandGuidelinesPage() {
   return (
     <>
@@ -254,7 +268,7 @@ export default function BrandGuidelinesPage() {
 
         <h3 style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, margin: "36px 0 6px" }}>Operational model: who does what</h3>
         <p className={s.note} style={{ marginBottom: 24 }}>This relationship is functional, not a second brand hierarchy — it does not replace the four levels above.</p>
-        <CorporateModel />
+        <CorporateModel locale="en" />
         <div className={s.card} style={{ border: "1.5px solid var(--core-signal)", background: "rgba(14,138,130,.06)", textAlign: "center", marginTop: 26, maxWidth: 640 }}>
           <p style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 13.5, margin: 0 }}>
             Charlie defines. CORE orchestrates and executes. ODDY operates
@@ -287,7 +301,7 @@ export default function BrandGuidelinesPage() {
             <div className={s.cardHead} style={{ color: "var(--core-signal)" }}>EXAMPLE B — ENDORSEMENT</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
               <div className={s.lockupRow}><CoreSymbol size={26} title="CORE" /><span className={s.wordmark} style={{ fontSize: 19 }}>CORE</span></div>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10.5, color: "var(--core-muted)", paddingLeft: 38 }}>by <span style={{ color: "#1D5FD6", fontWeight: 600 }}>ODDY</span></div>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10.5, color: "var(--core-muted)", paddingLeft: 38 }}>by <span style={{ color: "#0B2A61", fontWeight: 600 }}>ODDY</span></div>
             </div>
             <p className={s.note}>CORE dominates, ODDY backs it in smaller type. Use: product, login, dashboard — where the user interacts with CORE.</p>
           </div>
@@ -423,7 +437,7 @@ export default function BrandGuidelinesPage() {
           {verticals.map((v) => (
             <div className={s.vertChip} key={v.slug}>
               <span className={s.vertDot} style={{ background: v.color }} />
-              <span className={s.vertName}>{v.name}<small>{v.short}</small></span>
+              <span className={s.vertName}>{v.name}<small>{vertShortEn[v.slug]}</small></span>
             </div>
           ))}
         </div>

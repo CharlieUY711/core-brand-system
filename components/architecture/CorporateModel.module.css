@@ -9,12 +9,27 @@
 .node {
   border: 1px solid var(--core-line);
   background: var(--core-surface);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   padding: 12px 14px;
   text-align: center;
   min-width: 120px;
   text-decoration: none;
   color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--duration-base) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+a.node:hover {
+  border-color: var(--core-signal);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.top.node:hover,
+a.top:hover {
+  border-color: var(--core-ink);
 }
 
 .t {

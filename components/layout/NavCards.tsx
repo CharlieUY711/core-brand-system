@@ -1,64 +1,68 @@
+"use client";
+
 import Link from "next/link";
+import { useLocale } from "@/lib/i18n/LocaleContext";
 import styles from "./NavCards.module.css";
 
-type Item = { label: string; href: string; live: boolean };
-type Group = { title: string; items: Item[] };
+type Item = { key: string; href: string; live: boolean };
+type Group = { groupKey: string; items: Item[] };
 
 const groups: Group[] = [
   {
-    title: "Brand",
+    groupKey: "brand",
     items: [
-      { label: "Brand Guidelines", href: "/brand/guidelines", live: true },
-      { label: "Logo & Assets", href: "/brand/logo", live: true },
-      { label: "Color System", href: "/brand/color", live: true },
-      { label: "Typography", href: "/brand/typography", live: true },
-      { label: "CORE Orbit", href: "/brand/orbit", live: true },
+      { key: "brandGuidelines", href: "/brand/guidelines", live: true },
+      { key: "logoAssets", href: "/brand/logo", live: true },
+      { key: "colorSystem", href: "/brand/color", live: true },
+      { key: "typography", href: "/brand/typography", live: true },
+      { key: "coreOrbit", href: "/brand/orbit", live: true },
     ],
   },
   {
-    title: "System",
+    groupKey: "system",
     items: [
-      { label: "CORE Logistics", href: "/system/logistics", live: true },
-      { label: "CORE Rep", href: "/system/rep", live: true },
-      { label: "CORE Market", href: "/system/market", live: true },
-      { label: "CORE Services", href: "/system/services", live: true },
-      { label: "CORE Intelligence", href: "/system/intelligence", live: true },
-      { label: "CORE Finance", href: "/system/finance", live: true },
+      { key: "logistics", href: "/system/logistics", live: true },
+      { key: "rep", href: "/system/rep", live: true },
+      { key: "market", href: "/system/market", live: true },
+      { key: "services", href: "/system/services", live: true },
+      { key: "intelligence", href: "/system/intelligence", live: true },
+      { key: "finance", href: "/system/finance", live: true },
     ],
   },
   {
-    title: "Corporate Architecture",
+    groupKey: "architecture",
     items: [
-      { label: "Overview", href: "/architecture", live: true },
-      { label: "Charlie", href: "/architecture/charlie", live: true },
-      { label: "ODDY", href: "/architecture/oddy", live: true },
-      { label: "OnDemand", href: "/architecture/ondemand", live: true },
-      { label: "COMITA", href: "/architecture/comita", live: true },
-      { label: "FACILIA", href: "/architecture/facilia", live: true },
+      { key: "overview", href: "/architecture", live: true },
+      { key: "charlie", href: "/architecture/charlie", live: true },
+      { key: "oddy", href: "/architecture/oddy", live: true },
+      { key: "ondemand", href: "/architecture/ondemand", live: true },
+      { key: "comita", href: "/architecture/comita", live: true },
+      { key: "facilia", href: "/architecture/facilia", live: true },
     ],
   },
   {
-    title: "Resources",
+    groupKey: "resources",
     items: [
-      { label: "Assets", href: "/resources/assets", live: false },
-      { label: "Icons", href: "/resources/icons", live: true },
-      { label: "UI Tokens", href: "/resources/tokens", live: true },
+      { key: "assets", href: "/resources/assets", live: false },
+      { key: "icons", href: "/resources/icons", live: true },
+      { key: "uiTokens", href: "/resources/tokens", live: true },
     ],
   },
 ];
 
 export default function NavCards() {
+  const { t } = useLocale();
   return (
     <div className={styles.grid}>
       {groups.map((group) => (
-        <div className={styles.card} key={group.title}>
-          <h3 className={styles.heading}>{group.title}</h3>
+        <div className={styles.card} key={group.groupKey}>
+          <h3 className={styles.heading}>{t(`nav.groups.${group.groupKey}`)}</h3>
           <ul className={styles.list}>
             {group.items.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className={styles.link}>
                   <span className={`${styles.dot} ${item.live ? styles.live : ""}`} aria-hidden="true" />
-                  {item.label}
+                  {t(`nav.items.${item.key}`)}
                 </Link>
               </li>
             ))}

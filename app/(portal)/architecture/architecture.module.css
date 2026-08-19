@@ -5,8 +5,8 @@
 .rule {
   border: 1.5px solid var(--core-signal);
   background: rgba(14, 138, 130, 0.06);
-  border-radius: 10px;
-  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
   margin: 24px auto 0;
   max-width: 640px;
   text-align: center;
@@ -24,9 +24,18 @@
   margin-top: 28px;
   max-width: 640px;
   border: 1px solid var(--core-line);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   background: var(--core-surface);
+  box-shadow: var(--shadow-sm);
   overflow: hidden;
+}
+
+.table tbody tr {
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.table tbody tr:hover {
+  background: var(--core-bg-elev);
 }
 
 .caption {

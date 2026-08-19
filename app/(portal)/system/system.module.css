@@ -1,8 +1,25 @@
+.group {
+  margin-top: 40px;
+}
+
+.group:first-of-type {
+  margin-top: 32px;
+}
+
+.groupLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--core-muted);
+  margin-bottom: 14px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-top: 32px;
 }
 
 .card {
@@ -29,6 +46,17 @@
   color: var(--core-muted);
   margin: 6px 0 0;
   line-height: 1.5;
+}
+
+.operator {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--core-muted);
+  border-top: 1px solid var(--core-line);
+  margin-top: 12px;
+  padding-top: 10px;
 }
 
 @media (max-width: 760px) {

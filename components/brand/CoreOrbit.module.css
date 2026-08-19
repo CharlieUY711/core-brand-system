@@ -25,7 +25,7 @@
 
 .category {
   font-family: var(--font-mono);
-  font-size: 7.5px;
+  font-size: 8.5px;
   letter-spacing: 0.08em;
   fill: var(--core-muted);
 }

@@ -1,3 +1,6 @@
+"use client";
+
+import { useLocale } from "@/lib/i18n/LocaleContext";
 import styles from "./TechnologyLayer.module.css";
 
 type TechnologyLayerProps = {
@@ -12,6 +15,7 @@ type TechnologyLayerProps = {
  * vertical is a platform for an operator, never the operator itself.
  */
 export default function TechnologyLayer({ operator, operatorRole, layer }: TechnologyLayerProps) {
+  const { t } = useLocale();
   return (
     <div className={styles.flow}>
       <div className={`${styles.node} ${styles.strong}`}>
@@ -21,7 +25,7 @@ export default function TechnologyLayer({ operator, operatorRole, layer }: Techn
       <div className={styles.stem} aria-hidden="true" />
       <div className={styles.node}>
         <div className={styles.t}>{layer}</div>
-        <div className={styles.d}>TECHNOLOGY PLATFORM</div>
+        <div className={styles.d}>{t("technologyLayer.technologyPlatform")}</div>
       </div>
     </div>
   );

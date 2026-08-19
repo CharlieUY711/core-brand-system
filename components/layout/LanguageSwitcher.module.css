@@ -1,0 +1,32 @@
+.wrap {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--core-line);
+  border-radius: var(--radius-full);
+  padding: 2px;
+  gap: 2px;
+}
+
+.btn {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  padding: 4px 9px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  color: var(--core-muted);
+  cursor: pointer;
+  line-height: 1.4;
+  transition: background var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out);
+}
+
+.btn:hover {
+  color: var(--core-text);
+}
+
+.btn.active {
+  background: var(--core-bg-elev);
+  color: var(--core-text);
+  font-weight: 600;
+}

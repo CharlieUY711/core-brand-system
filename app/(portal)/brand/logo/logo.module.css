@@ -59,7 +59,7 @@
 }
 
 .link {
-  color: var(--core-signal);
+  color: var(--core-text-accent);
 }
 
 @media (max-width: 760px) {

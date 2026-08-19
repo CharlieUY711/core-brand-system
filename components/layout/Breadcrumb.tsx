@@ -3,9 +3,9 @@ import styles from "./Breadcrumb.module.css";
 
 type Crumb = { label: string; href?: string };
 
-export default function Breadcrumb({ items }: { items: Crumb[] }) {
+export default function Breadcrumb({ items, ariaLabel = "Breadcrumb" }: { items: Crumb[]; ariaLabel?: string }) {
   return (
-    <nav className={styles.bar} aria-label="Breadcrumb">
+    <nav className={styles.bar} aria-label={ariaLabel}>
       <ol className={styles.list}>
         {items.map((item, i) => {
           const isLast = i === items.length - 1;

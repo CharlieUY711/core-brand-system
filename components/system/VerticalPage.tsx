@@ -1,33 +1,59 @@
+"use client";
+
 import Link from "next/link";
 import Section from "@/components/ui/Section";
 import TechnologyLayer from "@/components/architecture/TechnologyLayer";
-import { Vertical } from "@/lib/content/verticals";
-import { entities } from "@/lib/content/entities";
+import { Vertical, RelatedEntitySlug } from "@/lib/content/verticals";
+import { Entity, entities } from "@/lib/content/entities";
+import { useLocale } from "@/lib/i18n/LocaleContext";
 import styles from "./VerticalPage.module.css";
 
+type RelatedEntity = { slug: RelatedEntitySlug; entity: Entity };
+
 export default function VerticalPage({ vertical }: { vertical: Vertical }) {
-  const flowEntity =
-    vertical.showFlow && vertical.relations?.[0]
-      ? entities.find((e) => vertical.relations![0].href.endsWith(e.slug))
-      : undefined;
+  const { t, dict } = useLocale();
+  const content = dict.verticals[vertical.slug];
+
+  const relatedEntities: RelatedEntity[] = (vertical.relations ?? [])
+    .map((slug) => {
+      const entity = entities.find((e) => e.slug === slug);
+      return entity ? { slug, entity } : null;
+    })
+    .filter((r): r is RelatedEntity => Boolean(r));
+
+  const flowEntities = vertical.showFlow ? relatedEntities : [];
 
   return (
     <>
-      <Section eyebrow="System" title={vertical.name} lede={vertical.role} />
+      <Section eyebrow={t("breadcrumb.system")} title={vertical.name} lede={content.role} />
 
-      {vertical.note && <p className={styles.note}>{vertical.note}</p>}
+      {content.note && <p className={styles.note}>{content.note}</p>}
 
-      {flowEntity && (
-        <TechnologyLayer operator={flowEntity.name} operatorRole={flowEntity.tag} layer={vertical.name} />
+      {flowEntities.length > 0 && (
+        <div className={styles.flows}>
+          {flowEntities.map((r) => (
+            <TechnologyLayer
+              key={r.slug}
+              operator={r.entity.name}
+              operatorRole={dict.entities[r.slug].tag}
+              layer={vertical.name}
+            />
+          ))}
+        </div>
       )}
 
-      {vertical.relations && vertical.relations.length > 0 && (
+      {relatedEntities.length > 0 && (
         <div className={styles.relation}>
-          <span className={styles.relationTag}>{vertical.relations.length > 1 ? "Relations" : "Relation"}</span>
+          <span className={styles.relationTag}>
+            {relatedEntities.length > 1 ? t("verticalPage.relations") : t("verticalPage.relation")}
+          </span>
           <ul className={styles.relationList}>
-            {vertical.relations.map((r) => (
-              <li key={r.href}>
-                {r.label} — <Link href={r.href} className={styles.relationLink}>see Corporate Architecture</Link>
+            {relatedEntities.map((r) => (
+              <li key={r.slug}>
+                {content.relations?.[r.slug]} —{" "}
+                <Link href={`/architecture/${r.slug}`} className={styles.relationLink}>
+                  {t("verticalPage.seeCorporateArchitecture")}
+                </Link>
               </li>
             ))}
           </ul>
