@@ -179,6 +179,7 @@ const es = {
     lede: "La identidad visual y el lenguaje de diseño de CORE.",
     items: {
       guidelines: { label: "Brand Guidelines", text: "El manual de identidad completo y aprobado — 21 secciones." },
+      definitions: { label: "Brand Definitions", text: "Logo, nombre, colores y tipografías de cada marca del ecosistema." },
       logo: { label: "Logo y Assets", text: "Assets oficiales del símbolo y los lockups." },
       color: { label: "Sistema de Color", text: "CORE Ink, CORE Signal y la paleta de soporte." },
       typography: { label: "Tipografía", text: "IBM Plex — roles de display, texto y UI." },

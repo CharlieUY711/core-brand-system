@@ -174,6 +174,7 @@ const en: Dictionary = {
     lede: "CORE's visual identity and design language.",
     items: {
       guidelines: { label: "Brand Guidelines", text: "The complete, approved identity manual — 21 sections." },
+      definitions: { label: "Brand Definitions", text: "Logo, name, colors and typefaces of every brand in the ecosystem." },
       logo: { label: "Logo & Assets", text: "Official symbol and lockup assets." },
       color: { label: "Color System", text: "CORE Ink, CORE Signal and the support palette." },
       typography: { label: "Typography", text: "IBM Plex — display, text and UI roles." },

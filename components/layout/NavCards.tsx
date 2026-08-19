@@ -12,6 +12,7 @@ const groups: Group[] = [
     groupKey: "brand",
     items: [
       { key: "brandGuidelines", href: "/brand/guidelines", live: true },
+      { key: "brandDefinitions", href: "/brand/definitions", live: true },
       { key: "logoAssets", href: "/brand/logo", live: true },
       { key: "colorSystem", href: "/brand/color", live: true },
       { key: "typography", href: "/brand/typography", live: true },
@@ -38,6 +39,8 @@ const groups: Group[] = [
       { key: "ondemand", href: "/architecture/ondemand", live: true },
       { key: "comita", href: "/architecture/comita", live: true },
       { key: "facilia", href: "/architecture/facilia", live: true },
+      { key: "kora", href: "/architecture/kora", live: true },
+      { key: "alma", href: "/architecture/alma", live: true },
     ],
   },
   {

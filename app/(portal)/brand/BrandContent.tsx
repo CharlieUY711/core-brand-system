@@ -8,6 +8,7 @@ import styles from "./brand.module.css";
 
 const itemKeys = [
   { key: "guidelines", href: "/brand/guidelines" },
+  { key: "definitions", href: "/brand/definitions" },
   { key: "logo", href: "/brand/logo" },
   { key: "color", href: "/brand/color" },
   { key: "typography", href: "/brand/typography" },
