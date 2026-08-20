@@ -1,8 +1,9 @@
-# CORE favicon / app icons
+# Favicon e ícono de app
 
-The browser favicon is generated from `app/icon.svg` (Next.js metadata file
-convention) and needs no manual export.
+Generados por `scripts/build-brand-assets.mjs` desde el símbolo maestro.
 
-Additional raster app-icon sizes (for PWA manifests, mobile home screens,
-etc.) will be exported here once that tooling is set up. See
-`/resources/icons` in the app for the currently validated reduction scales.
+- `favicon-16 … 512.png` — el símbolo en Ink, diez escalas
+- `app-icon-32 … 512.png` — el símbolo en blanco sobre Ink, según § 15
+
+Misma geometría en todas las escalas: el símbolo no necesita adaptación al
+reducirse, algo que Brand Guidelines § 13–14 dan por validado a 16 px.

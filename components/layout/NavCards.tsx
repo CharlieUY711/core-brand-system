@@ -46,7 +46,7 @@ const groups: Group[] = [
   {
     groupKey: "resources",
     items: [
-      { key: "assets", href: "/resources/assets", live: false },
+      { key: "assets", href: "/resources/assets", live: true },
       { key: "icons", href: "/resources/icons", live: true },
       { key: "uiTokens", href: "/resources/tokens", live: true },
     ],
