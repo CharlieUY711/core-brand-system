@@ -18,3 +18,14 @@
     padding: 0 24px 40px;
   }
 }
+
+/* Breadcrumb and language switcher share the top line: the guidelines are a
+   standalone document, outside the portal shell, so the switcher has to live
+   here or the translations become unreachable. */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}

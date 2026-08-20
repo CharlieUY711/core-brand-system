@@ -231,6 +231,240 @@ const en: Dictionary = {
       noteText: "CORE Orbit is not part of the D3-C geometry. It is a separate compositional resource for covers, presentations, web pages, institutional backgrounds, diagrams, motion and storytelling.",
     },
   },
+  // Brand Guidelines v1.0. English is the language the approved manual was
+  // written in, so every string here is the original wording, verbatim —
+  // the Spanish and Portuguese blocks are translations of this, not the
+  // other way round.
+  guidelines: {
+    metaTitle: "Brand Guidelines",
+    crumbRoot: "CORE Brand & System",
+    crumbVersion: "Brand Guidelines v1.0",
+    frozen: "D3-C frozen",
+    tocNavLabel: "Brand Guidelines sections",
+    toc: [
+      "Concept",
+      "Symbol D3-C",
+      "Construction",
+      "Clear space",
+      "Minimum sizes",
+      "Palette",
+      "Typography",
+      "Wordmark",
+      "CORE Group",
+      "Brand architecture",
+      "ODDY relationship",
+      "CORE Orbit",
+      "Reduction",
+      "Favicon",
+      "App icon",
+      "Versions",
+      "Incorrect uses",
+      "UI color system",
+      "Verticals",
+      "Applications",
+      "Master rules",
+    ],
+    heroEyebrow: "CORE Group — Brand Guidelines · v1.0",
+    heroTitle: "The nucleus that connects and orchestrates a system.",
+    heroThesisRich:
+      "CORE is not a circle. It is not a stylized O. It is not a dot with decoration around it. It is a <b>dominant nucleus</b> holding a <b>subordinate system</b> — the same reading its geometry, brand architecture and visual language repeat in every application.",
+
+    s01Title: "Concept",
+    s01CorrectHead: "Correct reading",
+    s01CorrectRich:
+      "CORE is the <strong>nucleus</strong> that connects and orchestrates a <strong>system</strong>. The outer ring dominates because it is identity; the inner ring is subordinate because it is relation, connection, circulation — it never competes with the nucleus, it accompanies it.",
+    s01AvoidHead: "Readings to avoid",
+    s01AvoidRich:
+      "&quot;CORE is a circle.&quot; — loses the nucleus/orbit hierarchy.<br />&quot;CORE is a stylized O.&quot; — reduces it to a variation of ODDY.<br />&quot;CORE is a dot with decoration.&quot; — inverts the weight: the nucleus stops dominating.",
+
+    s02Title: "Symbol D3-C — CORE Symbol Master",
+    s02Lede:
+      "Master asset. Every later application in this document derives from this single source — it is never redrawn by hand.",
+    s02Caption: "Symbol facts",
+    s02AssetName: "Asset name",
+    s02Variant: "Variant",
+    s02Concept: "Concept",
+    s02ConceptValue: "dominant nucleus + inner orbit",
+    s02Status: "Status",
+    s02StatusValue: "frozen — 41/50 in comparative validation",
+    s02Origin: "Geometric origin",
+    s02OriginValue: "ODDY's ring DNA, reinterpreted",
+
+    s03Title: "Construction",
+    s03Lede:
+      "Technical specification faithful to the master. Reproduce these exact values — do not eyeball it.",
+    s03Nucleus: "Nucleus (outer ring)",
+    s03Orbit: "Inner orbit",
+    s03OuterRadius: "Outer radius",
+    s03InnerCut: "Inner cut",
+    s03CutOffset: "Cut offset",
+    s03CutOffsetFrom: "from center",
+    s03Thickness: "Resulting thickness",
+    s03ThicknessValue: "22 / 18 (≈25% of radius)",
+    s03Gap: "Gap from nucleus",
+    s03RefBox: "Reference box",
+    s03RefBoxValue: "viewBox 200 × 200, center 100,100",
+    s03Incline: "Incline",
+    s03InclineValue: "-20°, applied equally to both layers",
+    s03TestColor: "Test color in this document",
+    s03TestColorValue: "#152238 — see § 06 Palette",
+
+    s04Title: "Clear space",
+    s04Lede: "A unit derived from the symbol itself — never an arbitrary pixel value.",
+    s04FormulaRich: "<strong>X = total symbol height ÷ 4.</strong>",
+    s04TextRich:
+      "No foreign element (text, container border, another logo) may invade a margin smaller than 1X around the symbol. The <strong>CORE</strong> wordmark and the <strong>CORE Group</strong> lockup inherit the same X unit, calculated on the symbol's height within each lockup — not on the full composition.",
+
+    s05Title: "Minimum sizes",
+    s05Lede: "Three distinct criteria — not interchangeable.",
+    s05ColElement: "Element",
+    s05ColDigital: "Minimum digital",
+    s05ColPrint: "Minimum print",
+    s05ColComfort: "Minimum comfortable",
+    s05RowSymbol: "Isolated symbol",
+    s05RowWordmark: "CORE wordmark",
+    s05Height: "height",
+
+    s06Title: "Palette",
+    s06Lede:
+      "Color was defined by what it needed to communicate, not the other way around. CORE needed real distance from ODDY — not just a different hue, a different register: where ODDY is vivid, luminous blue (operating brand, energy), CORE is a deep, almost graphite blue (platform, system, institutional sobriety). Same chromatic lineage, opposite roles.",
+    s06Neutrals: "Neutrals",
+    s06Semantic: "Semantic",
+
+    s07Title: "Typography",
+    s07Lede:
+      "IBM Plex — one super-family covering display, text, UI and data without fragmenting the system.",
+    s07Display: "Display — Plex Sans 700/600",
+    s07Text: "Text — Plex Sans 400/500",
+    s07Data: "UI / Data — Plex Mono",
+
+    s08Title: "Wordmark",
+    s08Lede:
+      "The symbol never competes with the word. Primary configuration: horizontal, symbol on the left.",
+    s08Primary: "Primary — horizontal, symbol + word",
+    s08Secondary: "Secondary — stacked, for square formats",
+    s08Isolated: "Isolated symbol — favicon, avatar, app icon",
+
+    s09Title: "CORE Group",
+    s09Lede:
+      "Superior corporate expression. Not a different company — the same symbol with a smaller second line of hierarchy.",
+    s09Note:
+      "\"Group\" never exceeds 40% of \"CORE\"'s size and never competes in visual weight — it is corporate structure endorsement, not a second brand name.",
+
+    s10Title: "Brand architecture",
+    s10Lede: "Four levels. Each answers a different question.",
+    s10L1: "Corporate brand / origin. External identity, immutable — CORE does not replace or reinterpret it.",
+    s10L2: "Platform / system. The technology layer that orchestrates the ecosystem — the D3-C symbol lives at this level.",
+    s10L3: "Corporate structure of the ecosystem, when context requires it (manuals, institutional communication).",
+    s10L4Name: "Verticals / products",
+    s10L4:
+      "CORE Logistics, CORE Rep, CORE Market, CORE Services, CORE Intelligence, CORE Finance — subordinate extensions, never independent brands. CORE Logistics is the technology layer for the logistics function — ODDY (territory, last-mile) and OnDemand (free zone, international), each in its own territory; CORE Market is the technology layer for COMITA (goods only); CORE Services is the technology layer for FACILIA (services only); CORE Rep and CORE Intelligence and CORE Finance are transversal capabilities of the platform, not tied to a single operator. CORE provides the system — it does not operate logistics or commerce. See § 19.",
+    s10ModelTitle: "Operational model: who does what",
+    s10ModelNote:
+      "This relationship is functional, not a second brand hierarchy — it does not replace the four levels above.",
+    s10Rule:
+      "Charlie defines. CORE orchestrates and executes. ODDY operates territory logistics and is the parent of OnDemand, which operates free-trade-zone and international logistics. COMITA trades goods; FACILIA delivers services — never the other's function. KORA develops the group's own technology and ALMA looks after its people. ODDY is never a parent of CORE.",
+
+    s11Title: "Relationship with ODDY",
+    s11Lede:
+      "Three ways of coexisting, resolved by hierarchy, space and typography — never by graphic fusion. The marks below are ODDY's official files, reproduced unaltered.",
+    s11AHead: "EXAMPLE A — SIDE BY SIDE",
+    s11ANote:
+      "Two brands sharing a surface, neither endorsing the other. Use: institutional footer, joint presentation closing, B2B materials. This is brand co-presence, not a statement of hierarchy — corporately, ODDY sits under CORE.",
+    s11BHead: "EXAMPLE B — ENDORSEMENT",
+    s11BParent: "parent of",
+    s11BNote:
+      "The only endorsement ODDY carries is the one it gives: OnDemand is endorsed by ODDY. ODDY itself takes no endorsement — it is not written \"by CORE\", and CORE is never written \"by ODDY\".",
+    s11CHead: "EXAMPLE C — STRUCTURE",
+    s11CNote:
+      "CORE Group as the umbrella, ODDY listed as an operating unit. Use: manual, org chart, institutional documentation.",
+    s11ImmutableTag: "ODDY BRAND ASSET — IMMUTABLE",
+    s11Immutable:
+      "ODDY's logotype, symbol, construction, proportions, colors and typography are not modified, redesigned, reinterpreted or fused with CORE anywhere in this document. The marks shown above are the approved files, reproduced at scale and nothing else. They appear on light grounds only: ODDY's logotype combines navy and blue, and on a dark ground its first \"D\" disappears and the mark reads \"O DY\".",
+
+    s12Title: "CORE Orbit",
+    s12Tag: "Compositional resource, not part of the symbol",
+    s12Text:
+      "The Orbit guide is an institutional communication tool — covers, presentations, motion. The D3-C symbol (§ 02) works complete without it. They are never combined into a single logo asset.",
+
+    s13Title: "Reduction system",
+    s13Lede:
+      "No technical adaptation is necessary — the master was already validated at 16px in the prior micro-test round. Same geometry, no exception, across all five scales.",
+
+    s14Title: "Favicon",
+    s14Lede: "16px, geometry identical to the master.",
+
+    s15Title: "App icon",
+    s15Lede:
+      "32px and above. The symbol works with generous margin — it does not need a color background to hold up.",
+
+    s16Title: "Versions",
+    s16Lede:
+      "Positive, negative, monochrome. D3-C geometry with no exception across the three.",
+    s16Positive: "Positive — light ground",
+    s16Negative: "Negative — dark ground",
+    s16Mono: "Monochrome — black / white",
+
+    s17Title: "Incorrect uses",
+    s17Lede:
+      "Illustrated only to document the error — none of these examples is a valid variant.",
+    s17Immutable:
+      "Do not modify ODDY to solve any problem in this section. If CORE clashes with ODDY in an application, the fix happens on CORE's side and in the composition — never on ODDY's asset.",
+
+    s18Title: "UI color system",
+    s18Lede:
+      "Products consume tokens, not loose hex values. All of them derive from the CORE architecture — there are no isolated per-application palettes.",
+    s18Shipments: "Active shipments",
+    s18Delivered: "delivered",
+    s18InTransit: "in transit",
+    s18Delayed: "delayed",
+    s18Failed: "failed",
+    s18Processed: "142 shipments processed today",
+    s18NewOrder: "New order",
+
+    s19Title: "Verticals",
+    s19Lede:
+      "Extensions of the CORE system, not independent brands: same symbol, same wordmark, one identifying tint per vertical, always in the same saturation/lightness band.",
+
+    s20Title: "Applications",
+    s20Digital: "Digital",
+    s20Corporate: "Corporate",
+    s20SignIn: "Sign in to CORE",
+    s20Continue: "Continue",
+    s20Login: "login",
+    s20Navbar: "navbar",
+    s20NavItems: "Dashboard · Shipments · Billing",
+    s20MobileHeader: "mobile header",
+    s20MobileDash: "Mobile dashboard",
+    s20Alerts: "3 new alerts",
+    s20SlideSub: "Business proposal · 2026",
+    s20SlideCover: "presentation cover",
+    s20FullName: "Full Name",
+    s20Role: "CORE — Platform",
+    s20BizCard: "business card",
+    s20DocHeader: "document header",
+    s20DocText: "Technical proposal",
+
+    s21Title: "Master rules — summary",
+    s21Rule: "RULE",
+    s21Rules: [
+      "D3-C is frozen.",
+      "ODDY is frozen.",
+      "No D4.",
+      "No redesigning ODDY.",
+      "No fusing ODDY + CORE.",
+      "CORE must have its own identity.",
+      "CORE Orbit is a graphic resource, not part of the logo.",
+      "Verticals are extensions of the CORE system, not independent brands.",
+      "Geometry stays identical across all applications.",
+      "The priority is building a system, not a pretty logo.",
+    ],
+    s21Q1: "Was the ODDY logo modified in any way?",
+    s21Q2: "Was the D3-C geometry modified in any way?",
+    s21No: "NO.",
+    s21ClosingRich:
+      "This document stands as the base for <strong>CORE Brand Guidelines v1.0</strong> and the starting point for real production: SVG/PNG export of the master symbol, favicon and app icon generation, UI components on the tokens defined in § 18, and corporate pieces on the lockups in § 08–09.",
+  },
   entities: {
     charlie: {
       tag: "Vision / Governance",
