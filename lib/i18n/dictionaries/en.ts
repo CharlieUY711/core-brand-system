@@ -125,6 +125,7 @@ const en: Dictionary = {
     restrictionLabel: "Restriction",
     immutableSuffix: "BRAND ASSET — IMMUTABLE",
     immutableNote: "{name} already has its own identity. It is never redrawn, modified or reinterpreted. The official file is not yet available in this repository — reference placeholder:",
+    immutableNoteHeld: "{name} already has its own identity. It is never redrawn, modified or reinterpreted. The official file is in this repository and is reproduced unaltered:",
     officialAssetPlaceholder: "{name} OFFICIAL ASSET — INSERT OFFICIAL FILE",
   },
   system: {

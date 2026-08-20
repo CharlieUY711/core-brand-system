@@ -78,6 +78,26 @@
   font-size: 15px;
 }
 
+/* The approved file itself, shown where the placeholder used to be. White
+   ground because ODDY's logotype is only valid on light backgrounds — its
+   first "D" disappears on dark and the mark reads "O DY". */
+.asset {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 12px 18px;
+  border: 1px solid var(--core-line);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.asset img {
+  display: block;
+  width: auto;
+  height: 34px;
+  max-width: 100%;
+}
+
 .placeholder {
   display: inline-flex;
   margin-top: 10px;

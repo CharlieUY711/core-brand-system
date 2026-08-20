@@ -41,8 +41,24 @@ export default function EntityPage({ entity }: { entity: Entity }) {
           <span className={styles.calloutTag}>
             {entity.name} {t("entityPage.immutableSuffix")}
           </span>
-          <p>{t("entityPage.immutableNote", { name: entity.name })}</p>
-          <div className={styles.placeholder}>{t("entityPage.officialAssetPlaceholder", { name: entity.name })}</div>
+          {entity.officialAsset ? (
+            <>
+              <p>{t("entityPage.immutableNoteHeld", { name: entity.name })}</p>
+              <div className={styles.asset}>
+                {/* Plain <img>: the file is an approved brand asset reproduced
+                    as-is, and next/image would re-encode it. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={entity.officialAsset} alt={entity.name} />
+              </div>
+            </>
+          ) : (
+            <>
+              <p>{t("entityPage.immutableNote", { name: entity.name })}</p>
+              <div className={styles.placeholder}>
+                {t("entityPage.officialAssetPlaceholder", { name: entity.name })}
+              </div>
+            </>
+          )}
         </div>
       )}
     </>

@@ -130,6 +130,7 @@ const es = {
     restrictionLabel: "Restricción",
     immutableSuffix: "ASSET DE MARCA — INMUTABLE",
     immutableNote: "{name} ya tiene su propia identidad. Nunca se redibuja, modifica ni reinterpreta. El archivo oficial todavía no está disponible en este repositorio — placeholder de referencia:",
+    immutableNoteHeld: "{name} ya tiene su propia identidad. Nunca se redibuja, modifica ni reinterpreta. El archivo oficial está en este repositorio y se reproduce sin alterar:",
     officialAssetPlaceholder: "{name} ASSET OFICIAL — INSERTAR ARCHIVO OFICIAL",
   },
   system: {

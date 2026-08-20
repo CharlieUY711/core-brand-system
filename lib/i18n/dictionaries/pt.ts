@@ -119,6 +119,7 @@ const pt: Dictionary = {
     restrictionLabel: "Restrição",
     immutableSuffix: "ATIVO DE MARCA — IMUTÁVEL",
     immutableNote: "A {name} já tem identidade própria. Nunca é redesenhada, modificada ou reinterpretada. O arquivo oficial ainda não está disponível neste repositório — placeholder de referência:",
+    immutableNoteHeld: "A {name} já tem identidade própria. Nunca é redesenhada, modificada ou reinterpretada. O arquivo oficial está neste repositório e é reproduzido sem alteração:",
     officialAssetPlaceholder: "ATIVO OFICIAL DA {name} — INSERIR ARQUIVO OFICIAL",
   },
   system: {

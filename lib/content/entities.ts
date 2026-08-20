@@ -83,6 +83,12 @@ export type Entity = {
    * which keeps them distinguishable in the orbit while staying inside the
    * family. */
   orbitColor?: string;
+  /** Path under public/ to the brand's official logo, when the file is
+   * actually in this repository. Only meaningful together with `immutable`:
+   * it is what separates "this mark is external and we hold the approved
+   * file" from "this mark is external and we do not have it yet", which the
+   * entity page must not state interchangeably. */
+  officialAsset?: string;
 };
 
 export const entities: Entity[] = [
@@ -96,6 +102,7 @@ export const entities: Entity[] = [
     slug: "oddy",
     name: "ODDY",
     immutable: true,
+    officialAsset: "/assets/oddy/official/logo-1024.png",
     orbitCategory: "LOGISTICS",
     orbitColor: "#0B2A61", // Navy ODDY
   },

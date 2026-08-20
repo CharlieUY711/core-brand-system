@@ -274,8 +274,9 @@ export default function BrandGuidelinesPage() {
             Charlie defines. CORE orchestrates and executes. ODDY operates
             territory logistics and is the parent of OnDemand, which
             operates free-trade-zone and international logistics. COMITA
-            trades goods; FACILIA delivers services. ODDY is never a parent
-            of CORE.
+            trades goods; FACILIA delivers services — never the other&apos;s
+            function. KORA develops the group&apos;s own technology and ALMA
+            looks after its people. ODDY is never a parent of CORE.
           </p>
         </div>
       </BrandSection>
@@ -285,30 +286,35 @@ export default function BrandGuidelinesPage() {
         id="oddy"
         number="11"
         title="Relationship with ODDY"
-        lede="Three ways of coexisting, resolved by hierarchy, space and typography — never by graphic fusion. ODDY is represented here only as a position reference: the official brand file must replace this placeholder in production."
+        lede="Three ways of coexisting, resolved by hierarchy, space and typography — never by graphic fusion. The marks below are ODDY's official files, reproduced unaltered."
       >
         <div className={s.grid3}>
           <div className={s.card}>
-            <div className={s.cardHead} style={{ color: "var(--core-signal)" }}>EXAMPLE A — PEERS</div>
+            <div className={s.cardHead} style={{ color: "var(--core-signal)" }}>EXAMPLE A — SIDE BY SIDE</div>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 14 }}>
-              <div className={s.oddyPlaceholder}><span className={s.oddyDot} />ODDY</div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/assets/oddy/official/logo-1024.png" alt="ODDY" style={{ height: 20, width: "auto" }} />
               <div style={{ width: 1, height: 28, background: "var(--core-line)" }} />
               <div className={s.lockupRow}><CoreSymbol size={22} title="CORE" /><span className={s.wordmark} style={{ fontSize: 16 }}>CORE</span></div>
             </div>
-            <p className={s.note}>Both as equivalent corporate units. Use: institutional footer, joint presentation closing, B2B materials between peers.</p>
+            <p className={s.note}>Two brands sharing a surface, neither endorsing the other. Use: institutional footer, joint presentation closing, B2B materials. This is brand co-presence, not a statement of hierarchy — corporately, ODDY sits under CORE.</p>
           </div>
           <div className={s.card}>
             <div className={s.cardHead} style={{ color: "var(--core-signal)" }}>EXAMPLE B — ENDORSEMENT</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-              <div className={s.lockupRow}><CoreSymbol size={26} title="CORE" /><span className={s.wordmark} style={{ fontSize: 19 }}>CORE</span></div>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10.5, color: "var(--core-muted)", paddingLeft: 38 }}>by <span style={{ color: "#0B2A61", fontWeight: 600 }}>ODDY</span></div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/assets/oddy/official/logo-1024.png" alt="ODDY" style={{ height: 24, width: "auto" }} />
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10.5, color: "var(--core-muted)" }}>parent of <span style={{ color: "#0169F5", fontWeight: 600 }}>OnDemand by ODDY</span></div>
             </div>
-            <p className={s.note}>CORE dominates, ODDY backs it in smaller type. Use: product, login, dashboard — where the user interacts with CORE.</p>
+            <p className={s.note}>The only endorsement ODDY carries is the one it gives: OnDemand is endorsed by ODDY. ODDY itself takes no endorsement — it is not written &quot;by CORE&quot;, and CORE is never written &quot;by ODDY&quot;.</p>
           </div>
           <div className={s.card}>
             <div className={s.cardHead} style={{ color: "var(--core-signal)" }}>EXAMPLE C — STRUCTURE</div>
             <div className={s.lockupRow}><CoreSymbol size={26} title="CORE Group" /><span className={s.wordmark} style={{ fontSize: 19 }}>CORE<small>Group</small></span></div>
-            <div className={s.oddyPlaceholder} style={{ marginTop: 10, fontSize: 11, padding: "5px 11px" }}><span className={s.oddyDot} style={{ width: 6, height: 6 }} />ODDY — corporate ecosystem</div>
+            <div style={{ marginTop: 10 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/assets/oddy/official/logo-1024.png" alt="ODDY" style={{ height: 16, width: "auto" }} />
+            </div>
             <p className={s.note}>CORE Group as the umbrella, ODDY listed as an operating unit. Use: manual, org chart, institutional documentation.</p>
           </div>
         </div>
@@ -317,8 +323,10 @@ export default function BrandGuidelinesPage() {
           <p>
             ODDY&apos;s logotype, symbol, construction, proportions, colors and typography
             are not modified, redesigned, reinterpreted or fused with CORE anywhere in this
-            document. Every &quot;ODDY&quot; element shown above is a position placeholder —
-            not a brand reproduction.
+            document. The marks shown above are the approved files, reproduced at scale and
+            nothing else. They appear on light grounds only: ODDY&apos;s logotype combines
+            navy and blue, and on a dark ground its first &quot;D&quot; disappears and the
+            mark reads &quot;O DY&quot;.
           </p>
         </div>
       </BrandSection>
