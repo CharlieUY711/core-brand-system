@@ -106,6 +106,22 @@
   .fichas{font-size:12.5px;}
   .sisnota{color:var(--muted);font-size:10.5px;margin-top:8px;}
   @media print{.sistema a{border-bottom:0;}}
+
+  .capas{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);}
+  .capas h2{font-family:var(--font-doc);font-weight:400;font-size:16px;margin:0 0 4px;}
+  .capaslede{font-size:11.5px;color:var(--muted);margin:0 0 16px;max-width:78ch;line-height:1.55;}
+  .capagrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:20px;}
+  .capa{border:1px solid var(--line);border-radius:4px;padding:13px 15px;}
+  .capaname{font-family:var(--font-doc);font-size:15px;margin-bottom:2px;}
+  .capakind{font-family:var(--font-mono);font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:7px;}
+  .capaverb{font-size:11.5px;line-height:1.5;}
+  .arbol{font-family:var(--font-mono);font-size:11px;line-height:1.75;background:var(--card);
+    border:1px solid var(--line);border-radius:4px;padding:15px 17px;overflow-x:auto;margin:0 0 18px;
+    white-space:pre;}
+  .capareglas{columns:2;column-gap:32px;font-size:11.5px;line-height:1.6;margin:0 0 14px;padding-left:17px;}
+  .capareglas li{margin-bottom:3px;break-inside:avoid;}
+  @media (max-width:640px){.capareglas{columns:1;}}
+  @media print{.arbol{white-space:pre;overflow:visible;}.capa,.arbol{break-inside:avoid;}}
 </style>
 
 <div class="sheet">
@@ -345,12 +361,101 @@
   </div>
 
   
+
+  <section class="capas">
+    <p class="syseyebrow">Arquitectura de capacidades</p>
+    <h2>CORE piensa y coordina. KORA materializa. ROKA operacionaliza.</h2>
+    <p class="capaslede">
+      Eje distinto al de la tabla de arriba: aquélla dice qué logo, qué colores y qué
+      tipografías tiene cada marca; ésta dice qué capa resuelve qué. CORE sigue siendo la
+      marca principal — KORA y ROKA son arquitecturas subordinadas, no marcas que compitan
+      con CORE. La suma de las tres <strong>es</strong> CORE, y permite armar soluciones
+      completas sin crear una marca nueva por cada producto, aplicación o metodología.
+    </p>
+
+    <div class="capagrid">
+      <div class="capa">
+        <div class="capaname">CORE</div>
+        <div class="capakind">Software</div>
+        <div class="capaverb">La capa de software, plataformas y sistemas digitales. Piensa y coordina.</div>
+      </div>
+      <div class="capa">
+        <div class="capaname">KORA</div>
+        <div class="capakind">Productos</div>
+        <div class="capaverb">Productos físicos y soluciones físicas. Materializa.</div>
+      </div>
+      <div class="capa">
+        <div class="capaname">ROKA</div>
+        <div class="capakind">Protocolos</div>
+        <div class="capaverb">Protocolos, metodologías y formas de operar. Operacionaliza. No es software ni producto físico.</div>
+      </div>
+    </div>
+
+    <pre class="arbol">CORE
+│
+├── SOFTWARE
+│   ├── Carrito PWA                  experiencia de compra digital y checkout
+│   ├── Kiting / Rack Builder        configuración, diseño y planificación de rack y kitting
+│   ├── CORE Market / Second         marketplace y segunda mano
+│   ├── AGENDA                       gestión y coordinación de agenda
+│   ├── ORQUESTADOR                  coordinación y orquestación de procesos y capacidades
+│   └── Marketing Profundo           análisis, estructuración y ejecución de marketing
+│
+├── KORA
+│   └── PRODUCTOS
+│       └── KORA CELL                unidad base de confinamiento
+│           ├── KORA CELL PRO        configuración avanzada
+│           └── KORA CELL MAX        alta densidad / capacidad
+│
+└── ROKA
+    └── PROTOCOLOS
+        └── Última milla sin desperdicio        concepto en desarrollo</pre>
+
+    <div class="sisgrid">
+      <div>
+        <h3>Reglas de arquitectura</h3>
+        <ul class="capareglas">
+          <li>CORE permanece como master brand.</li>
+          <li>Las aplicaciones digitales permanecen bajo CORE.</li>
+          <li>Los productos físicos permanecen bajo KORA.</li>
+          <li>Los protocolos permanecen bajo ROKA.</li>
+          <li>No se crea una cuarta capa de marca.</li>
+          <li>No se crean sub-marcas innecesarias.</li>
+          <li>No se crean logos individuales por producto.</li>
+          <li>No se crean símbolos individuales por protocolo.</li>
+          <li>PRO y MAX son configuraciones de KORA CELL, no marcas.</li>
+          <li>La identidad visual de CORE no se modifica.</li>
+        </ul>
+        <p class="sisnota">
+          La jerarquía queda abierta: admite nuevos productos KORA y nuevos protocolos ROKA
+          sin tocar el nivel de marca.
+        </p>
+      </div>
+      <div>
+        <h3>Qué falta definir</h3>
+        <p class="sisnota" style="margin-top:0">
+          <strong>ROKA no tiene identidad visual.</strong> Entra en la arquitectura, no en la
+          tabla de marcas: no tiene logo, paleta ni tipografía asignadas. <strong>A DEFINIR.</strong>
+        </p>
+        <p class="sisnota">
+          <strong>KORA CELL no tiene especificaciones.</strong> El principio definido es
+          <em>confinamiento sin pasillos, sin tornillos</em>. Materiales, dimensiones,
+          capacidades, certificaciones y prestaciones están <strong>A DEFINIR</strong>.
+        </p>
+        <p class="sisnota">
+          <strong>“Última milla sin desperdicio” es un concepto en desarrollo</strong>, no una
+          metodología cerrada. Sin métricas, procesos, KPIs ni estándares definidos.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="sistema">
     <h2>El sistema</h2>
     <div class="sisgrid">
       <div>
         <h3>Documentos transversales</h3>
-        <p><a href="#">Master Brand Definitions</a> — esta página. Las seis marcas de un vistazo.</p>
+        <p><a href="#">Master Brand Definitions</a> — esta página. Las marcas del ecosistema de un vistazo, y la arquitectura de capacidades.</p>
         <p><a href="./guia-de-uso.html">Guía de Uso de Marca</a> — para qué sirve el sistema y cómo usarlo. 3 carillas A4.</p>
       </div>
       <div>
